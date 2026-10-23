@@ -49,7 +49,7 @@ plausible number is not.
 flowchart TB
     A["AI RESPONSE"] --> B["OBSERVATION"]
     B --> C["MEASUREMENT"]
-    C --> D["VERIFIABLE EVIDENCE"]
+    C --> D["EVIDENCE"]
     D --> E["HUMAN DECISION"]
 ```
 

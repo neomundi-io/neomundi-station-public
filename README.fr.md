@@ -51,7 +51,7 @@ est un résultat honnête, et qu'un chiffre plausible ne l'est pas.
 flowchart TB
     A["RÉPONSE IA"] --> B["OBSERVATION"]
     B --> C["MESURE"]
-    C --> D["PREUVE VÉRIFIABLE"]
+    C --> D["PREUVE"]
     D --> E["DÉCISION HUMAINE"]
 ```
 
