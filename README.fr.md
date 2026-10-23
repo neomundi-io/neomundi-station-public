@@ -52,7 +52,7 @@ flowchart TB
     A["RÉPONSE IA"] --> B["OBSERVATION"]
     B --> C["MESURE"]
     C --> D["PREUVE"]
-    D --> E["DÉCISION HUMAINE"]
+    D --> E["DÉCISION"]
 ```
 
 | Étape | Ce qui se passe |
