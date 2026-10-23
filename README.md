@@ -1,12 +1,35 @@
+<div align="center">
+
+<sub><b>English</b> · <a href="README.fr.md">Français</a></sub>
+
 # NeoMundi Station
 
-## When AI responds, NeoMundi measures.
+### When AI responds, NeoMundi measures.
 
-Ask an AI a question. NeoMundi Station records the answer, measures what it is
-worth, and keeps the proof — so that what an AI system said can be **shown to
-someone else** instead of merely remembered.
+**An independent measurement layer for AI systems — what was answered, what
+that answer was worth, and proof a third party can check.**
 
-🇫🇷 [Lire ce document en français](README.fr.md)
+[![Metrology for AI systems](https://img.shields.io/badge/Metrology-for_AI_systems-475569?style=flat-square)](#what-it-does-in-plain-terms)
+[![JSON Schemas: 15](https://img.shields.io/badge/JSON_Schemas-15-0f766e?style=flat-square)](schemas/)
+[![Evidence: hash-chained ledger](https://img.shields.io/badge/Evidence-hash--chained_ledger-475569?style=flat-square)](#evidence)
+[![Python SDK: experimental](https://img.shields.io/badge/Python_SDK-experimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-python-sdk)
+[![MCP: experimental](https://img.shields.io/badge/MCP-experimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-mcp)
+[![License: all rights reserved](https://img.shields.io/badge/License-all_rights_reserved-6b7280?style=flat-square)](#licence)
+
+**[Live Station](https://station.neomundi.org)** ·
+[Documentation](#documentation) ·
+[Schemas](schemas/) ·
+[Experiments](#experiments) ·
+[SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
+[MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
+[Pilots](https://neomundi.io)
+
+<sub>Start with the **15 record contracts**: exactly what gets written down for
+every answer an AI gives — the model actually served, the parameters that took
+effect, what was measured, and what could not be. No account, no key, nothing
+to install.</sub>
+
+</div>
 
 ---
 
