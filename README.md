@@ -45,13 +45,9 @@ plausible number is not.
 
 ## How it works
 
-```mermaid
-flowchart TB
-    A["AI RESPONSE"] --> B["OBSERVATION"]
-    B --> C["MEASUREMENT"]
-    C --> D["EVIDENCE"]
-    D --> E["HUMAN DECISION"]
-```
+| AI RESPONSE | OBSERVATION | MEASUREMENT | EVIDENCE | HUMAN DECISION |
+|---|---|---|---|---|
+| AI answers | Record what happened | Evaluate available signals | Preserve verifiable proof | Human interprets |
 
 | Step | What happens |
 |---|---|

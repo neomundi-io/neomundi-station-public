@@ -47,13 +47,9 @@ est un résultat honnête, et qu'un chiffre plausible ne l'est pas.
 
 ## Comment ça fonctionne
 
-```mermaid
-flowchart TB
-    A["RÉPONSE IA"] --> B["OBSERVATION"]
-    B --> C["MESURE"]
-    C --> D["PREUVE"]
-    D --> E["DÉCISION"]
-```
+| RÉPONSE IA | OBSERVATION | MESURE | PREUVE | DÉCISION HUMAINE |
+|---|---|---|---|---|
+| L'IA répond | Consigner ce qui s'est passé | Évaluer les signaux disponibles | Conserver une preuve vérifiable | L'humain interprète |
 
 | Étape | Ce qui se passe |
 |---|---|
