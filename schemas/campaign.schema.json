@@ -1,0 +1,188 @@
+{
+  "$defs": {
+    "Protocol": {
+      "additionalProperties": false,
+      "description": "Protocole d'une campagne.\n\nObjet de valeur imbriqué qui regroupe les quatre éléments que le contrat énumère\nentre parenthèses : créneaux UTC, répétitions, paramètres de génération et\nbaseline. Aucun champ n'a de valeur par défaut : tout vient du fichier de\ncampagne.",
+      "properties": {
+        "baseline_days": {
+          "minimum": 0,
+          "title": "Baseline Days",
+          "type": "integer"
+        },
+        "generation_params": {
+          "additionalProperties": true,
+          "title": "Generation Params",
+          "type": "object"
+        },
+        "repetitions_per_slot": {
+          "exclusiveMinimum": 0,
+          "title": "Repetitions Per Slot",
+          "type": "integer"
+        },
+        "slots": {
+          "items": {
+            "format": "time",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Slots",
+          "type": "array"
+        }
+      },
+      "required": [
+        "slots",
+        "repetitions_per_slot",
+        "generation_params",
+        "baseline_days"
+      ],
+      "title": "Protocol",
+      "type": "object"
+    },
+    "ProviderProfile": {
+      "additionalProperties": false,
+      "description": "Couple fournisseur / modèle demandé, tel que déclaré par une campagne.\n\n`deprecated_at` sert une règle de l'instrument : la dépréciation d'un modèle\nclôt sa série, et le remplaçant ouvre une série jamais raccordée. Le profil\nest le porteur naturel de cette date.",
+      "properties": {
+        "declared_at": {
+          "format": "date-time",
+          "title": "Declared At",
+          "type": "string"
+        },
+        "deprecated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated At"
+        },
+        "model_requested": {
+          "minLength": 1,
+          "title": "Model Requested",
+          "type": "string"
+        },
+        "provider": {
+          "minLength": 1,
+          "title": "Provider",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "model_requested",
+        "declared_at"
+      ],
+      "title": "ProviderProfile",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Campagne figée au lancement.\n\n`closed_at` et `supersedes` portent la règle « modifier = clore et ouvrir\nune nouvelle version » : une campagne close peut désigner celle qui la\nremplace, comme une correction référence l'enregistrement qu'elle corrige.",
+  "properties": {
+    "analysis_plan_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Analysis Plan Sha256",
+      "type": "string"
+    },
+    "campaign_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Campaign Id",
+      "type": "string"
+    },
+    "campaign_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Campaign Sha256",
+      "type": "string"
+    },
+    "closed_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Closed At"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "pack": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Pack",
+      "type": "string"
+    },
+    "panel_ids": {
+      "default": [],
+      "items": {
+        "maxLength": 200,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Panel Ids",
+      "type": "array"
+    },
+    "protocol": {
+      "$ref": "#/$defs/Protocol"
+    },
+    "provider_models": {
+      "items": {
+        "$ref": "#/$defs/ProviderProfile"
+      },
+      "minItems": 1,
+      "title": "Provider Models",
+      "type": "array"
+    },
+    "sentinel_prompt_versions": {
+      "default": [],
+      "items": {
+        "maxLength": 200,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Sentinel Prompt Versions",
+      "type": "array"
+    },
+    "supersedes": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Supersedes"
+    }
+  },
+  "required": [
+    "campaign_id",
+    "pack",
+    "provider_models",
+    "protocol",
+    "analysis_plan_sha256",
+    "campaign_sha256",
+    "created_at"
+  ],
+  "title": "Campaign",
+  "type": "object"
+}

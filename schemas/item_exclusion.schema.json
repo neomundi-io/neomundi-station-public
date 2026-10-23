@@ -1,0 +1,40 @@
+{
+  "additionalProperties": false,
+  "description": "Item écarté d'un panel, avec son motif.\n\nUne exclusion porte toujours son motif : il est obligatoire\net non vide, sans quoi l'exclusion n'est pas auditable.",
+  "properties": {
+    "dataset_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "dataset_version": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "item_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Item Id",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "dataset_version",
+    "item_id",
+    "reason"
+  ],
+  "title": "ItemExclusion",
+  "type": "object"
+}

@@ -1,0 +1,149 @@
+{
+  "$defs": {
+    "ItemExclusion": {
+      "additionalProperties": false,
+      "description": "Item écarté d'un panel, avec son motif.\n\nUne exclusion porte toujours son motif : il est obligatoire\net non vide, sans quoi l'exclusion n'est pas auditable.",
+      "properties": {
+        "dataset_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "dataset_version": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "item_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "title": "Item Id",
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "dataset_version",
+        "item_id",
+        "reason"
+      ],
+      "title": "ItemExclusion",
+      "type": "object"
+    },
+    "ItemRef": {
+      "additionalProperties": false,
+      "description": "Référence à un item de dataset, jamais une copie.\n\nObjet de valeur imbriqué : un panel est une\n« sélection d'`item_id` depuis un ou plusieurs datasets », ce qui suppose de\nnommer le dataset et sa version en plus de l'item.",
+      "properties": {
+        "dataset_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "dataset_version": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "item_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "title": "Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "dataset_version",
+        "item_id"
+      ],
+      "title": "ItemRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Sélection d'items figée par hash.",
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "draw_rule": {
+      "minLength": 1,
+      "title": "Draw Rule",
+      "type": "string"
+    },
+    "exclusions": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ItemExclusion"
+      },
+      "title": "Exclusions",
+      "type": "array"
+    },
+    "panel_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Panel Id",
+      "type": "string"
+    },
+    "panel_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Panel Sha256",
+      "type": "string"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "selected_items": {
+      "items": {
+        "$ref": "#/$defs/ItemRef"
+      },
+      "minItems": 1,
+      "title": "Selected Items",
+      "type": "array"
+    },
+    "stratification": {
+      "anyOf": [
+        {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Stratification"
+    }
+  },
+  "required": [
+    "panel_id",
+    "seed",
+    "draw_rule",
+    "selected_items",
+    "panel_sha256",
+    "created_at"
+  ],
+  "title": "Panel",
+  "type": "object"
+}

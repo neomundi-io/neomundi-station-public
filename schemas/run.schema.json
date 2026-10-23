@@ -1,0 +1,69 @@
+{
+  "additionalProperties": false,
+  "description": "Exécution d'un créneau pour une campagne.\n\n`campaign_sha256` est obligatoire : le hash de la campagne est enregistré\nau lancement, afin que toute modification ultérieure du\nfichier soit détectée et bloque l'exécution.\n\nLe contrat n'énumère pas les champs d'un Run ; on retient le minimum qu'il\nimplique : l'identifiant référencé par l'Observation, la campagne et son\ngel, le créneau, les bornes temporelles et les empreintes d'intégrité.",
+  "properties": {
+    "campaign_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Campaign Id",
+      "type": "string"
+    },
+    "campaign_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Campaign Sha256",
+      "type": "string"
+    },
+    "code_commit": {
+      "minLength": 1,
+      "title": "Code Commit",
+      "type": "string"
+    },
+    "config_snapshot_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Config Snapshot Sha256",
+      "type": "string"
+    },
+    "finished_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Finished At"
+    },
+    "run_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "slot": {
+      "format": "time",
+      "title": "Slot",
+      "type": "string"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "campaign_id",
+    "campaign_sha256",
+    "slot",
+    "started_at",
+    "code_commit",
+    "config_snapshot_sha256"
+  ],
+  "title": "Run",
+  "type": "object"
+}

@@ -1,0 +1,41 @@
+{
+  "additionalProperties": false,
+  "description": "Couple fournisseur / modèle demandé, tel que déclaré par une campagne.\n\n`deprecated_at` sert une règle de l'instrument : la dépréciation d'un modèle\nclôt sa série, et le remplaçant ouvre une série jamais raccordée. Le profil\nest le porteur naturel de cette date.",
+  "properties": {
+    "declared_at": {
+      "format": "date-time",
+      "title": "Declared At",
+      "type": "string"
+    },
+    "deprecated_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deprecated At"
+    },
+    "model_requested": {
+      "minLength": 1,
+      "title": "Model Requested",
+      "type": "string"
+    },
+    "provider": {
+      "minLength": 1,
+      "title": "Provider",
+      "type": "string"
+    }
+  },
+  "required": [
+    "provider",
+    "model_requested",
+    "declared_at"
+  ],
+  "title": "ProviderProfile",
+  "type": "object"
+}

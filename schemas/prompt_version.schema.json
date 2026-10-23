@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "description": "Prompt versionné d'une sentinelle.\n\nLe texte est un cas synthétique : aucune donnée patient réelle, même\npartiellement anonymisée. Cette interdiction est éditoriale\net ne peut pas être vérifiée par un contrat.",
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "pack": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Pack",
+      "type": "string"
+    },
+    "prompt_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Prompt Sha256",
+      "type": "string"
+    },
+    "prompt_version": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "prompt_version",
+    "pack",
+    "text",
+    "prompt_sha256",
+    "created_at"
+  ],
+  "title": "PromptVersion",
+  "type": "object"
+}

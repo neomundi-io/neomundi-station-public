@@ -1,0 +1,73 @@
+{
+  "$defs": {
+    "ReferenceEvaluationStatus": {
+      "description": "Issue de l'évaluation d'une réponse face à la vérité de référence.\n\n`ABSTENTION` et `UNPARSEABLE` ne sont **jamais** comptés comme des erreurs.\nLa propriété `ReferenceEvaluation.counts_as_error` est la\nforme exécutable de cette règle.",
+      "enum": [
+        "correct",
+        "incorrect",
+        "abstention",
+        "unparseable"
+      ],
+      "title": "ReferenceEvaluationStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Verdict déterministe d'un évaluateur sur une observation de flux D.",
+  "properties": {
+    "evaluated_at": {
+      "format": "date-time",
+      "title": "Evaluated At",
+      "type": "string"
+    },
+    "evaluation_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Evaluation Id",
+      "type": "string"
+    },
+    "evaluator_version": {
+      "minLength": 1,
+      "title": "Evaluator Version",
+      "type": "string"
+    },
+    "extracted_answer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Extracted Answer"
+    },
+    "observation_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "reference_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Reference Sha256",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/ReferenceEvaluationStatus"
+    }
+  },
+  "required": [
+    "evaluation_id",
+    "observation_id",
+    "reference_sha256",
+    "status",
+    "evaluator_version",
+    "evaluated_at"
+  ],
+  "title": "ReferenceEvaluation",
+  "type": "object"
+}

@@ -1,0 +1,112 @@
+{
+  "additionalProperties": false,
+  "description": "Manifeste d'un dataset importé.\n\n`licence` est obligatoire : un import sans licence est refusé.\n\nSix champs ont été ajoutés après coup, chacun pour une raison précise — un\nmanifeste qui ne permet pas de refaire l'import ne prouve rien.\n\n- `revision_resolved` : la révision **effectivement servie**, à côté de la\n  révision demandée. Demander `main` ne désigne pas un contenu ; seul le\n  commit résolu le fait. C'est la même discipline que « modèle demandé ≠\n  modèle servi », appliquée à une source de données.\n- `source_path` : le chemin du fichier **dans** le dépôt source. Un dépôt\n  en contient plusieurs ; savoir lequel a servi est indispensable.\n- `source_sha256` : l'empreinte du fichier source tel qu'il a été\n  téléchargé. Distincte de `items_sha256`, qui porte sur le résultat de la\n  normalisation : les deux ensemble prouvent qu'on a normalisé *ce*\n  fichier-là.\n- `references_sha256` : l'empreinte des réponses de référence, qui vivent\n  dans un fichier séparé. Deux empreintes permettent de vérifier\n  l'intégrité des questions **sans ouvrir** les réponses.\n- `normalization` : la correspondance des champs du jeu d'origine utilisée\n  pour normaliser. Sans elle, le même fichier source pourrait donner un\n  autre résultat et l'import ne serait pas reproductible.\n- `item_count` : le nombre d'items attendu. Sert au contrôle d'intégrité\n  des deux fichiers et permet à `station panel create` de refuser un panel\n  plus grand que son univers.",
+  "properties": {
+    "dataset_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "imported_at": {
+      "format": "date-time",
+      "title": "Imported At",
+      "type": "string"
+    },
+    "item_count": {
+      "exclusiveMinimum": 0,
+      "title": "Item Count",
+      "type": "integer"
+    },
+    "items_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Items Sha256",
+      "type": "string"
+    },
+    "language": {
+      "minLength": 1,
+      "title": "Language",
+      "type": "string"
+    },
+    "licence": {
+      "minLength": 1,
+      "title": "Licence",
+      "type": "string"
+    },
+    "normalization": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Normalization",
+      "type": "object"
+    },
+    "normalized_format": {
+      "minLength": 1,
+      "title": "Normalized Format",
+      "type": "string"
+    },
+    "references_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "References Sha256",
+      "type": "string"
+    },
+    "revision": {
+      "minLength": 1,
+      "title": "Revision",
+      "type": "string"
+    },
+    "revision_resolved": {
+      "minLength": 1,
+      "title": "Revision Resolved",
+      "type": "string"
+    },
+    "source": {
+      "minLength": 1,
+      "title": "Source",
+      "type": "string"
+    },
+    "source_path": {
+      "minLength": 1,
+      "title": "Source Path",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    },
+    "url": {
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    },
+    "version": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "version",
+    "source",
+    "url",
+    "source_path",
+    "revision",
+    "revision_resolved",
+    "licence",
+    "source_sha256",
+    "items_sha256",
+    "references_sha256",
+    "item_count",
+    "imported_at",
+    "normalized_format",
+    "normalization",
+    "language"
+  ],
+  "title": "DatasetManifest",
+  "type": "object"
+}

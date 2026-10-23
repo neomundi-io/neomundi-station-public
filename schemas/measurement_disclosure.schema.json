@@ -1,0 +1,103 @@
+{
+  "$defs": {
+    "DecisionBasis": {
+      "description": "Sur quoi l'API a fondé sa décision, quand elle le dit.\n\nAjouté par la version de mesure `3.3.0` de l'API. Le mode OBS ne\npublie que `ALLOW` ou `FLAG`, de sorte qu'un seul mot portait deux\naffirmations sans rapport : « les mesures ont franchi un seuil » et « nous\nn'avons pas pu finir de mesurer ». Un `FLAG` fondé sur\n`INCOMPLETE_MEASUREMENT` n'est **pas** un constat sur le contenu observé.\n\nLa Station n'applique aucune décision : cette\nénumération sert à **enregistrer** fidèlement ce que l'instrument a déclaré,\njamais à filtrer ou à bloquer quoi que ce soit.\n\n**Trois valeurs, et non deux.** La note de contrat de l'API n'en documente\nque `measured_thresholds` et `incomplete_measurement` ; le code en sert une\ntroisième, `no_check_attempted`, lorsqu'aucune analyse sémantique n'a été\nlancée. L'omettre ferait échouer la validation stricte sur une réponse\nparfaitement normale. Écart consigné au contrat de mesure.\n\nL'absence de valeur n'est pas modélisée ici : elle se dit par `None` sur le\nchamp qui porte cette énumération, et signifie « l'API ne l'a pas dit »,\njamais « rien ne manquait ».",
+      "enum": [
+        "measured_thresholds",
+        "incomplete_measurement",
+        "no_check_attempted"
+      ],
+      "title": "DecisionBasis",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Déclaration de restitution attachée à un `Measurement`.\n\nUn `Measurement` porte au plus une `MeasurementDisclosure`, et une\n`MeasurementDisclosure` ne vaut que pour le `Measurement` qu'elle nomme.\nLe lien est porté par `measurement_id` ; `observation_id` est recopié pour\nqu'un lecteur du registre puisse remonter à l'observation sans jointure,\nexactement comme `Measurement` le fait déjà.\n\nLes trois champs déclaratifs sont **tous** nullables, et leur `None` est\nune information : il dit que la réponse lue ne portait pas le champ, donc\nqu'elle précède `3.3.0`. Aucun d'eux n'a de valeur par défaut qui\naffirmerait quelque chose à la place de l'API.",
+  "properties": {
+    "aggregates_publishable": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Aggregates Publishable"
+    },
+    "decision_basis": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DecisionBasis"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "disclosed_at": {
+      "format": "date-time",
+      "title": "Disclosed At",
+      "type": "string"
+    },
+    "disclosure_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Disclosure Id",
+      "type": "string"
+    },
+    "disclosure_version": {
+      "minLength": 1,
+      "title": "Disclosure Version",
+      "type": "string"
+    },
+    "measurement_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Measurement Id",
+      "type": "string"
+    },
+    "measurement_version": {
+      "minLength": 1,
+      "title": "Measurement Version",
+      "type": "string"
+    },
+    "missing_required_signals": {
+      "anyOf": [
+        {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Missing Required Signals"
+    },
+    "observation_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Observation Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "disclosure_id",
+    "measurement_id",
+    "observation_id",
+    "disclosure_version",
+    "measurement_version",
+    "disclosed_at"
+  ],
+  "title": "MeasurementDisclosure",
+  "type": "object"
+}

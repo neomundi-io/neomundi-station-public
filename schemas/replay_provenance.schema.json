@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "ExecutionRegime": {
+      "description": "Comment une réponse observée a été obtenue.\n\nVocabulaire **fermé**, et délibérément hors des contrats scellés : il sert à\nlire et à valider un identifiant de fournisseur, non à typer un champ de\npreuve. La preuve, elle, est le nom qualifié lui-même.",
+      "enum": [
+        "live",
+        "replay",
+        "synthetic"
+      ],
+      "title": "ExecutionRegime",
+      "type": "string"
+    },
+    "ModelServedAttestation": {
+      "description": "Ce que la Station **sait** du modèle qui a réellement répondu.\n\nL'instrument enregistre le modèle demandé **et** le modèle servi. Tous\nles fournisseurs ne servent pas le second : Cohere n'expose aucun champ de\nce genre, ni en v2 ni en v1. Trois niveaux disent donc ce qu'on sait,\nplutôt que de laisser une absence muette ressembler à un oubli.\n\n- `PROVIDER_ATTESTED` — le fournisseur a renvoyé l'identifiant servi, et\n  `model_served` le porte. C'est le seul niveau où cette exigence est\n  pleinement vérifiable.\n- `REQUESTED_ONLY` — le contrat du fournisseur **n'expose pas** de modèle\n  servi. Absence **structurelle**, connue d'avance par l'audit.\n  `model_served` est nul.\n- `UNAVAILABLE` — le contrat l'expose, mais **cette réponse-là** ne l'a pas\n  porté. Absence **accidentelle**, donc anomalie à compter. `model_served`\n  est nul.\n\n**`REQUESTED_ONLY` ne signifie jamais « servi = demandé ».** Le modèle servi\nreste inconnu : recopier le modèle demandé transformerait une absence de\npreuve en preuve : c'est interdit, et un validateur l'empêche.\n\nLa distinction entre les deux niveaux nuls porte l'essentiel : une série\nCohere est **uniformément** `requested_only`, tandis qu'un `unavailable`\nisolé chez un fournisseur qui documente le champ signale une déviation de\ncontrat. Les confondre ferait disparaître un incident dans une normalité.",
+      "enum": [
+        "provider_attested",
+        "requested_only",
+        "unavailable"
+      ],
+      "title": "ModelServedAttestation",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "L'origine d'une observation qui n'a pas été générée par un appel.\n\nUne observation `live` n'en a **aucune** : il n'y a pas de fichier à nommer,\net écrire un enregistrement vide affirmerait une origine là où il y a un\nappel. Seuls les régimes `replay` et `synthetic` en produisent une, et un\nvalidateur le fait respecter plutôt que de compter sur la discipline.",
+  "properties": {
+    "bundle_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Bundle Sha256",
+      "type": "string"
+    },
+    "observation_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "origin": {
+      "minLength": 1,
+      "title": "Origin",
+      "type": "string"
+    },
+    "provenance_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Provenance Id",
+      "type": "string"
+    },
+    "provenance_version": {
+      "minLength": 1,
+      "title": "Provenance Version",
+      "type": "string"
+    },
+    "provider": {
+      "minLength": 1,
+      "title": "Provider",
+      "type": "string"
+    },
+    "recorded_attestation": {
+      "$ref": "#/$defs/ModelServedAttestation"
+    },
+    "recording_path": {
+      "minLength": 1,
+      "title": "Recording Path",
+      "type": "string"
+    },
+    "recording_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Recording Sha256",
+      "type": "string"
+    },
+    "regime": {
+      "$ref": "#/$defs/ExecutionRegime"
+    },
+    "replayed_at": {
+      "format": "date-time",
+      "title": "Replayed At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "provenance_id",
+    "observation_id",
+    "provenance_version",
+    "regime",
+    "provider",
+    "origin",
+    "recording_path",
+    "recording_sha256",
+    "bundle_sha256",
+    "recorded_attestation",
+    "replayed_at"
+  ],
+  "title": "ReplayProvenance",
+  "type": "object"
+}

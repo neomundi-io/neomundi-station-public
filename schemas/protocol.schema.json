@@ -1,0 +1,38 @@
+{
+  "additionalProperties": false,
+  "description": "Protocole d'une campagne.\n\nObjet de valeur imbriqué qui regroupe les quatre éléments que le contrat énumère\nentre parenthèses : créneaux UTC, répétitions, paramètres de génération et\nbaseline. Aucun champ n'a de valeur par défaut : tout vient du fichier de\ncampagne.",
+  "properties": {
+    "baseline_days": {
+      "minimum": 0,
+      "title": "Baseline Days",
+      "type": "integer"
+    },
+    "generation_params": {
+      "additionalProperties": true,
+      "title": "Generation Params",
+      "type": "object"
+    },
+    "repetitions_per_slot": {
+      "exclusiveMinimum": 0,
+      "title": "Repetitions Per Slot",
+      "type": "integer"
+    },
+    "slots": {
+      "items": {
+        "format": "time",
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Slots",
+      "type": "array"
+    }
+  },
+  "required": [
+    "slots",
+    "repetitions_per_slot",
+    "generation_params",
+    "baseline_days"
+  ],
+  "title": "Protocol",
+  "type": "object"
+}

@@ -1,0 +1,330 @@
+{
+  "$defs": {
+    "ExecutionStatus": {
+      "description": "Issue de l'appel fournisseur pour une observation.\n\nLe contrat nomme `execution_status` sans en énumérer les valeurs. On\nretient le minimum qui distingue une réponse obtenue d'un échec, sans\npréjuger des codes d'erreur des fournisseurs, qui relèvent d'un autre contrat.",
+      "enum": [
+        "ok",
+        "error"
+      ],
+      "title": "ExecutionStatus",
+      "type": "string"
+    },
+    "FlowType": {
+      "description": "Flux d'origine d'une observation.\n\nPorté par l'**Observation**, figé à la génération, et entrant dans la clé de\ncomparabilité. Ne jamais confondre avec `MeasurementReason`.",
+      "enum": [
+        "L",
+        "D_rotatif",
+        "D_ancre"
+      ],
+      "title": "FlowType",
+      "type": "string"
+    },
+    "ModelServedAttestation": {
+      "description": "Ce que la Station **sait** du modèle qui a réellement répondu.\n\nL'instrument enregistre le modèle demandé **et** le modèle servi. Tous\nles fournisseurs ne servent pas le second : Cohere n'expose aucun champ de\nce genre, ni en v2 ni en v1. Trois niveaux disent donc ce qu'on sait,\nplutôt que de laisser une absence muette ressembler à un oubli.\n\n- `PROVIDER_ATTESTED` — le fournisseur a renvoyé l'identifiant servi, et\n  `model_served` le porte. C'est le seul niveau où cette exigence est\n  pleinement vérifiable.\n- `REQUESTED_ONLY` — le contrat du fournisseur **n'expose pas** de modèle\n  servi. Absence **structurelle**, connue d'avance par l'audit.\n  `model_served` est nul.\n- `UNAVAILABLE` — le contrat l'expose, mais **cette réponse-là** ne l'a pas\n  porté. Absence **accidentelle**, donc anomalie à compter. `model_served`\n  est nul.\n\n**`REQUESTED_ONLY` ne signifie jamais « servi = demandé ».** Le modèle servi\nreste inconnu : recopier le modèle demandé transformerait une absence de\npreuve en preuve : c'est interdit, et un validateur l'empêche.\n\nLa distinction entre les deux niveaux nuls porte l'essentiel : une série\nCohere est **uniformément** `requested_only`, tandis qu'un `unavailable`\nisolé chez un fournisseur qui documente le champ signale une déviation de\ncontrat. Les confondre ferait disparaître un incident dans une normalité.",
+      "enum": [
+        "provider_attested",
+        "requested_only",
+        "unavailable"
+      ],
+      "title": "ModelServedAttestation",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Ce que le modèle a répondu, avec ses métadonnées.\n\nLe découpage est : identité, temps, fournisseur, entrée, sortie. Les\nblocs « Mesure NeoMundi », « Évaluation D » et « Intégrité »\nappartiennent respectivement à `Measurement`, `ReferenceEvaluation` et\n`EvidenceRecord` — les fusionner est interdit.\n\n`repetition_index` est compté à partir de 0. Aucune convention n'est\nimposée ; seule la contrainte de positivité est imposée ici.\n\n`dataset_version` complète les `dataset_id` et `item_id` : les\ndatasets étant versionnés et immuables, la version est nécessaire\npour que la référence à l'item soit non ambiguë.",
+  "properties": {
+    "campaign_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Campaign Id",
+      "type": "string"
+    },
+    "cost": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cost"
+    },
+    "dataset_id": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Dataset Id"
+    },
+    "dataset_version": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Dataset Version"
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error"
+    },
+    "execution_status": {
+      "$ref": "#/$defs/ExecutionStatus"
+    },
+    "finish_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Finish Reason"
+    },
+    "flow_type": {
+      "$ref": "#/$defs/FlowType"
+    },
+    "item_id": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Item Id"
+    },
+    "latency_ms": {
+      "minimum": 0,
+      "title": "Latency Ms",
+      "type": "integer"
+    },
+    "model_requested": {
+      "minLength": 1,
+      "title": "Model Requested",
+      "type": "string"
+    },
+    "model_served": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Served"
+    },
+    "model_served_attestation": {
+      "$ref": "#/$defs/ModelServedAttestation"
+    },
+    "observation_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "pack": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Pack",
+      "type": "string"
+    },
+    "params_effective": {
+      "additionalProperties": true,
+      "title": "Params Effective",
+      "type": "object"
+    },
+    "params_sent": {
+      "additionalProperties": true,
+      "title": "Params Sent",
+      "type": "object"
+    },
+    "prompt_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Prompt Sha256",
+      "type": "string"
+    },
+    "prompt_version": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "provider": {
+      "minLength": 1,
+      "title": "Provider",
+      "type": "string"
+    },
+    "received_at": {
+      "format": "date-time",
+      "title": "Received At",
+      "type": "string"
+    },
+    "repetition_index": {
+      "minimum": 0,
+      "title": "Repetition Index",
+      "type": "integer"
+    },
+    "request_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Request Sha256",
+      "type": "string"
+    },
+    "response_length": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Response Length"
+    },
+    "response_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Response Sha256"
+    },
+    "response_text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Response Text"
+    },
+    "run_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "sent_at": {
+      "format": "date-time",
+      "title": "Sent At",
+      "type": "string"
+    },
+    "slot": {
+      "format": "time",
+      "title": "Slot",
+      "type": "string"
+    },
+    "system_fingerprint": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "System Fingerprint"
+    },
+    "tokens_input": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tokens Input"
+    },
+    "tokens_output": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tokens Output"
+    }
+  },
+  "required": [
+    "observation_id",
+    "run_id",
+    "campaign_id",
+    "pack",
+    "flow_type",
+    "slot",
+    "repetition_index",
+    "sent_at",
+    "received_at",
+    "latency_ms",
+    "provider",
+    "model_requested",
+    "model_served_attestation",
+    "params_sent",
+    "params_effective",
+    "prompt_version",
+    "prompt_sha256",
+    "request_sha256",
+    "execution_status"
+  ],
+  "title": "Observation",
+  "type": "object"
+}

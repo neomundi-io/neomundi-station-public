@@ -1,0 +1,34 @@
+{
+  "additionalProperties": false,
+  "description": "Référence à un item de dataset, jamais une copie.\n\nObjet de valeur imbriqué : un panel est une\n« sélection d'`item_id` depuis un ou plusieurs datasets », ce qui suppose de\nnommer le dataset et sa version en plus de l'item.",
+  "properties": {
+    "dataset_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "dataset_version": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "item_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Item Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "dataset_version",
+    "item_id"
+  ],
+  "title": "ItemRef",
+  "type": "object"
+}

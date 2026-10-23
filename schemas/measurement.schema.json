@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "MeasurementReason": {
+      "description": "Motif d'une mesure.\n\nPorté par le **Measurement**. Une même Observation peut porter plusieurs\nMeasurements : la mesure initiale, puis les rejeux (A) et les régressions de\nversion (B). Un rejeu ou une régression ne crée aucune Observation et\nn'émet aucun appel fournisseur.",
+      "enum": [
+        "initiale",
+        "A_rejeu",
+        "B_regression",
+        "temoin"
+      ],
+      "title": "MeasurementReason",
+      "type": "string"
+    },
+    "MeasurementStatus": {
+      "description": "État d'une mesure NeoMundi.\n\n`NOT_MEASURED` et `DEGRADED` exigent un motif : une panne doit ressembler à\nune panne.",
+      "enum": [
+        "measured",
+        "not_measured",
+        "degraded"
+      ],
+      "title": "MeasurementStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Résultat d'un appel `POST /v1/govern` sur une observation.\n\nLe dictionnaire `signals` est volontairement ouvert : les noms de signaux\nviennent de l'API et leur liste exhaustive est établie par l'audit du\ncontrat de l'API. Les figer ici les coderait en dur — ce que l'instrument\ninterdit — et supposerait un schéma qu'on ne peut pas présumer.\n\n`neomundi_measurement_id` est nullable : l'emplacement de l'identifiant de\nmesure dans la réponse est l'une des inconnues déclarées du contrat.",
+  "properties": {
+    "checks_emitted": {
+      "minimum": 0,
+      "title": "Checks Emitted",
+      "type": "integer"
+    },
+    "measured_at": {
+      "format": "date-time",
+      "title": "Measured At",
+      "type": "string"
+    },
+    "measured_signals": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Measured Signals",
+      "type": "array"
+    },
+    "measurement_coverage": {
+      "anyOf": [
+        {
+          "ge": 0.0,
+          "le": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Measurement Coverage"
+    },
+    "measurement_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Measurement Id",
+      "type": "string"
+    },
+    "measurement_reason": {
+      "$ref": "#/$defs/MeasurementReason"
+    },
+    "measurement_version": {
+      "minLength": 1,
+      "title": "Measurement Version",
+      "type": "string"
+    },
+    "neomundi_measurement_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Neomundi Measurement Id"
+    },
+    "observation_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reason"
+    },
+    "signals": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Signals",
+      "type": "object"
+    },
+    "status": {
+      "$ref": "#/$defs/MeasurementStatus"
+    }
+  },
+  "required": [
+    "measurement_id",
+    "observation_id",
+    "measurement_version",
+    "measurement_reason",
+    "checks_emitted",
+    "status",
+    "measured_at"
+  ],
+  "title": "Measurement",
+  "type": "object"
+}

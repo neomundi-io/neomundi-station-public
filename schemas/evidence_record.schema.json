@@ -1,0 +1,81 @@
+{
+  "additionalProperties": false,
+  "description": "Maillon de la chaîne append-only du registre de preuves.",
+  "properties": {
+    "code_commit": {
+      "minLength": 1,
+      "title": "Code Commit",
+      "type": "string"
+    },
+    "comparability_key": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparability Key"
+    },
+    "config_snapshot_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Config Snapshot Sha256",
+      "type": "string"
+    },
+    "prev_record_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prev Record Sha256"
+    },
+    "record_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Record Id",
+      "type": "string"
+    },
+    "record_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Record Sha256",
+      "type": "string"
+    },
+    "record_type": {
+      "minLength": 1,
+      "title": "Record Type",
+      "type": "string"
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "title": "Recorded At",
+      "type": "string"
+    },
+    "subject_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_][A-Za-z0-9._:-]*$",
+      "title": "Subject Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "record_id",
+    "record_type",
+    "subject_id",
+    "recorded_at",
+    "config_snapshot_sha256",
+    "code_commit",
+    "record_sha256"
+  ],
+  "title": "EvidenceRecord",
+  "type": "object"
+}
