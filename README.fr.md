@@ -48,11 +48,11 @@ est un résultat honnête, et qu'un chiffre plausible ne l'est pas.
 ## Comment ça fonctionne
 
 ```mermaid
-flowchart LR
-    A["IA<br/>répond à une question"] --> O["OBSERVATION<br/>la réponse, enregistrée<br/>telle qu'arrivée"]
-    O --> M["MESURE<br/>ce que cette réponse<br/>vaut"]
-    M --> P["PREUVE<br/>registre en ajout seul,<br/>scellé d'entrée en entrée"]
-    P --> H["DÉCISION HUMAINE<br/>hors de l'instrument"]
+flowchart TB
+    A["RÉPONSE IA"] --> B["OBSERVATION"]
+    B --> C["MESURE"]
+    C --> D["PREUVE VÉRIFIABLE"]
+    D --> E["DÉCISION HUMAINE"]
 ```
 
 | Étape | Ce qui se passe |

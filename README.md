@@ -46,11 +46,11 @@ plausible number is not.
 ## How it works
 
 ```mermaid
-flowchart LR
-    A["AI<br/>answers a question"] --> O["OBSERVATION<br/>the answer, recorded<br/>as it came"]
-    O --> M["MEASUREMENT<br/>what that answer<br/>is worth"]
-    M --> P["PROOF<br/>ledger, add-only,<br/>sealed entry to entry"]
-    P --> H["HUMAN DECISION<br/>outside the instrument"]
+flowchart TB
+    A["AI RESPONSE"] --> B["OBSERVATION"]
+    B --> C["MEASUREMENT"]
+    C --> D["VERIFIABLE EVIDENCE"]
+    D --> E["HUMAN DECISION"]
 ```
 
 | Step | What happens |
