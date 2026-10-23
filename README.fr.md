@@ -1,12 +1,35 @@
+<div align="center">
+
+<sub><a href="README.md">English</a> · <b>Français</b></sub>
+
 # NeoMundi Station
 
-## Quand l'IA répond, NeoMundi mesure.
+### Quand l'IA répond, NeoMundi mesure.
 
-Posez une question à une IA. NeoMundi Station enregistre la réponse, mesure ce
-qu'elle vaut, et en garde la preuve — pour que ce qu'un système d'IA a dit
-puisse être **montré à quelqu'un d'autre** au lieu d'être seulement retenu.
+**Une couche de mesure indépendante pour les systèmes d'IA — ce qui a été
+répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 
-🇬🇧 [Read this document in English](README.md)
+[![Métrologie des systèmes d'IA](https://img.shields.io/badge/M%C3%A9trologie-syst%C3%A8mes_d'IA-475569?style=flat-square)](#ce-que-ça-fait-simplement)
+[![Schémas JSON : 15](https://img.shields.io/badge/Sch%C3%A9mas_JSON-15-0f766e?style=flat-square)](schemas/)
+[![Preuve : registre chaîné](https://img.shields.io/badge/Preuve-registre_cha%C3%AEn%C3%A9-475569?style=flat-square)](#preuves)
+[![SDK Python : expérimental](https://img.shields.io/badge/SDK_Python-exp%C3%A9rimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-python-sdk)
+[![MCP : expérimental](https://img.shields.io/badge/MCP-exp%C3%A9rimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-mcp)
+[![Licence : tous droits réservés](https://img.shields.io/badge/Licence-tous_droits_r%C3%A9serv%C3%A9s-6b7280?style=flat-square)](#licence)
+
+**[Live Station](https://station.neomundi.org)** ·
+[Documentation](#documentation) ·
+[Schémas](schemas/) ·
+[Expériences](#expériences) ·
+[SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
+[MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
+[Pilotes](https://neomundi.io)
+
+<sub>Commencez par les **15 contrats d'enregistrement** : exactement ce qui est
+consigné pour chaque réponse d'une IA — le modèle réellement servi, les
+paramètres qui ont pris effet, ce qui a été mesuré, et ce qui n'a pas pu
+l'être. Aucun compte, aucune clé, rien à installer.</sub>
+
+</div>
 
 ---
 
