@@ -12,6 +12,7 @@ that answer was worth, and proof a third party can check.**
 [![Metrology for AI systems](https://img.shields.io/badge/Metrology-for_AI_systems-475569?style=flat-square)](#what-it-does-in-plain-terms)
 [![JSON Schemas: 15](https://img.shields.io/badge/JSON_Schemas-15-0f766e?style=flat-square)](schemas/)
 [![Evidence: hash-chained ledger](https://img.shields.io/badge/Evidence-hash--chained_ledger-475569?style=flat-square)](#evidence)
+[![Interop Contract: RGC](https://img.shields.io/badge/Interop_Contract-RGC-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-interoperability)
 [![Python SDK: experimental](https://img.shields.io/badge/Python_SDK-experimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-python-sdk)
 [![MCP: experimental](https://img.shields.io/badge/MCP-experimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-mcp)
 [![License: all rights reserved](https://img.shields.io/badge/License-all_rights_reserved-6b7280?style=flat-square)](#licence)
@@ -19,6 +20,7 @@ that answer was worth, and proof a third party can check.**
 **[Live Station](https://station.neomundi.org)** ·
 [Documentation](#documentation) ·
 [Schemas](schemas/) ·
+[Interop Contract](#built-for-interoperability) ·
 [Experiments](#experiments) ·
 [SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
 [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
@@ -63,6 +65,81 @@ plausible number is not.
 | **A researcher** | Versioned, frozen questions; declared execution conditions; the model that **actually** answered recorded next to the one requested; a refusal recorded as a result rather than guessed; and a comparability key that makes it impossible to silently average two different setups into one series. |
 | **A company deploying AI** | Something to show a client, an auditor or a board: *this* is what the system answered, under *these* conditions, and *this* is what the answer was worth — evidence that can be checked, rather than a claim that has to be believed. |
 | **A pilot team** | A ledger of your own. [Get in touch](https://neomundi.io). |
+
+---
+
+## Built for interoperability
+
+NeoMundi adds a measurement layer to the AI infrastructure you already run.
+Measurements leave as **signed, versioned JSON that another system can verify
+on its own** — you keep your stack, your policies and your decisions.
+
+| Interface | What it gives you | Status |
+|---|---|---|
+| **[Interop Contract — RGC](https://github.com/neomundi-io/neomundi-measurement-interoperability)** | A measurement transported to another system as signed, versioned JSON: public schema, public verification keys, a reference consumer, and a live demo. | **Available** |
+| **[JSON Schemas](schemas/)** | The 15 record contracts this instrument writes — readable here, no account, nothing to install. | **Available** |
+| **[Python SDK](https://github.com/neomundi-io/neomundi-python-sdk)** | Call the measurement API directly, without Station. | **Experimental** |
+| **[MCP connector](https://github.com/neomundi-io/neomundi-measurement-mcp)** | One `measure_execution` tool, so an agent can measure what it produced. | **Experimental** |
+
+> **Two contracts, and they are not the same one.** The **Interop Contract**
+> describes what leaves NeoMundi toward a third party, signed and verifiable.
+> The **JSON Schemas** describe what this instrument writes into its own
+> ledger. Reading one does not give you the other.
+
+**The contract is published and live.** Its schema and its public verification
+keys are served by the API; the repository carries the versioned schema files —
+**v0.1, which the public endpoint serves today, and v0.2** — and a reference
+consumer walks the eight steps from receiving a contract to retaining an
+auditable receipt.
+
+### Go deeper, in this order
+
+**[Interop Contract](https://github.com/neomundi-io/neomundi-measurement-interoperability)** → **[JSON Schemas](schemas/)** →
+**[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Privacy](#privacy)** →
+**[EU AI Act](#eu-ai-act)** → **[Pilots](https://neomundi.io/pilots)** →
+**[Evidence](#evidence)**
+
+### Privacy
+
+**An architecture, and it is verifiable rather than promised.** The
+interoperability contract is built so that **raw prompts, raw model responses
+and raw provider identifiers never travel in it** — a consumer can check that
+before storing anything. This instrument's read-only API applies the same rule:
+you get fingerprints and lengths, never the text.
+
+The contract also requires no disclosure of your own policies, thresholds or
+decision rules: it concerns the **shared interface**, not your internal logic.
+The published [privacy policy](https://neomundi.io/privacy) covers what the
+architecture itself does not.
+
+### EU AI Act
+
+Organisations working under the EU AI Act have to **show that controls existed
+and that behaviour was observed**. That is the material NeoMundi produces:
+timestamped runtime measurements, their coverage, what could not be measured,
+and a ledger that a third party can verify.
+
+What it does not do is decide. **No conformity assessment, no certification,
+no legal verdict** — see below.
+
+### What this does not establish
+
+The limits worth knowing, in one place:
+
+- **No universal compatibility.** There is no universal adapter and no plug-in
+  for a given platform. Interoperability goes through the contract, and an
+  architecture has to be able to consume it.
+- **No certified compliance.** NeoMundi produces evidence; it does not
+  determine whether an AI system is legally compliant, and performs neither
+  conformity assessment nor certification.
+- **The SDK and the MCP connector are experimental.** The SDK targets a
+  measurement version older than the one this instrument audits: mixing results
+  from both into one series would break the comparability rule. The SDK is not
+  published to a package index; the MCP connector's transport is validated, its
+  measurement contract is not yet validated in production.
+- **A published pilot is a pilot.** [NeoMundi × OASSE](https://github.com/neomundi-io/use-case-oasse-runtime-governance) carries its own
+  public evidence and states plainly what it does *not* establish — neither
+  production readiness nor universal interoperability.
 
 ---
 
@@ -194,23 +271,13 @@ Then: **the Station itself** at **<https://station.neomundi.org>** — see
 
 ### Integrations
 
-**Two exist, both experimental, and what follows is what they do today —
-not a roadmap.**
+The SDK, the MCP connector and the interoperability contract are described
+together under **[Built for interoperability](#built-for-interoperability)**,
+with their status and their limits.
 
-| | |
-|---|---|
-| [**neomundi-python-sdk**](https://github.com/neomundi-io/neomundi-python-sdk) | Calls the measurement API directly, without Station. **Not published to a package index**, so you install it from source. |
-| [**neomundi-measurement-mcp**](https://github.com/neomundi-io/neomundi-measurement-mcp) | Exposes a single `measure_execution` tool, so an agent can measure what it produced. **Transport validated; its measurement contract is not yet validated in production.** |
-
-**One caution matters more than the others, and it is practical rather than
-legal.** The SDK targets a measurement version **older** than the one this
-instrument audits: mixing results from the two into a single series would
-break the comparability rule **without warning you**. Keep them in separate
-series.
-
-**Neither grants you a licence.** The MCP connector has no licence file at
-all; the SDK carries a notice stating that the choice has not been made. See
-[Licence](#licence).
+**Neither the SDK nor the MCP connector grants you a licence.** The MCP
+connector has no licence file at all; the SDK carries a notice stating that the
+choice has not been made. See [Licence](#licence).
 
 ---
 

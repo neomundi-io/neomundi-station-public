@@ -12,6 +12,7 @@ répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 [![Métrologie des systèmes d'IA](https://img.shields.io/badge/M%C3%A9trologie-syst%C3%A8mes_d'IA-475569?style=flat-square)](#ce-que-ça-fait-simplement)
 [![Schémas JSON : 15](https://img.shields.io/badge/Sch%C3%A9mas_JSON-15-0f766e?style=flat-square)](schemas/)
 [![Preuve : registre chaîné](https://img.shields.io/badge/Preuve-registre_cha%C3%AEn%C3%A9-475569?style=flat-square)](#preuves)
+[![Contrat d'interopérabilité : RGC](https://img.shields.io/badge/Interop-RGC-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-interoperability)
 [![SDK Python : expérimental](https://img.shields.io/badge/SDK_Python-exp%C3%A9rimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-python-sdk)
 [![MCP : expérimental](https://img.shields.io/badge/MCP-exp%C3%A9rimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-mcp)
 [![Licence : tous droits réservés](https://img.shields.io/badge/Licence-tous_droits_r%C3%A9serv%C3%A9s-6b7280?style=flat-square)](#licence)
@@ -19,6 +20,7 @@ répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 **[Live Station](https://station.neomundi.org)** ·
 [Documentation](#documentation) ·
 [Schémas](schemas/) ·
+[Contrat d'interopérabilité](#conçu-pour-linteropérabilité) ·
 [Expériences](#expériences) ·
 [SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
 [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
@@ -65,6 +67,85 @@ est un résultat honnête, et qu'un chiffre plausible ne l'est pas.
 | **Chercheur** | Des questions versionnées et gelées ; des conditions d'exécution déclarées ; le modèle qui a **réellement** répondu enregistré à côté de celui qui était demandé ; un refus enregistré comme un résultat plutôt que deviné ; et une clé de comparabilité qui rend impossible de moyenner en silence deux dispositifs différents dans une même série. |
 | **Entreprise qui déploie de l'IA** | De quoi montrer à un client, à un auditeur ou à un comité : voici ce que le système a répondu, dans **ces** conditions, et voici ce que la réponse valait — une preuve qui se vérifie, plutôt qu'une affirmation qu'il faut croire. |
 | **Équipe pilote** | Un registre qui vous est propre. [Écrivez-nous](https://neomundi.io). |
+
+---
+
+## Conçu pour l'interopérabilité
+
+NeoMundi ajoute une couche de mesure à l'infrastructure d'IA que vous exploitez
+déjà. Les mesures en sortent sous forme de **JSON signé et versionné qu'un
+autre système peut vérifier lui-même** — vous gardez votre pile, vos politiques
+et vos décisions.
+
+| Interface | Ce qu'elle vous donne | Statut |
+|---|---|---|
+| **[Contrat d'interopérabilité — RGC](https://github.com/neomundi-io/neomundi-measurement-interoperability)** | Une mesure transportée vers un autre système, en JSON signé et versionné : schéma public, clés de vérification publiques, consommateur de référence, démonstration en ligne. | **Disponible** |
+| **[Schémas JSON](schemas/)** | Les 15 contrats d'enregistrement que cet instrument écrit — lisibles ici, sans compte, sans rien installer. | **Disponible** |
+| **[SDK Python](https://github.com/neomundi-io/neomundi-python-sdk)** | Appeler l'API de mesure directement, sans la Station. | **Expérimental** |
+| **[Connecteur MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** | Un outil `measure_execution`, pour qu'un agent mesure ce qu'il a produit. | **Expérimental** |
+
+> **Deux contrats, et ce n'est pas le même.** Le **contrat d'interopérabilité**
+> décrit ce qui sort de NeoMundi vers un tiers, signé et vérifiable. Les
+> **schémas JSON** décrivent ce que cet instrument écrit dans son propre
+> registre. Lire l'un ne donne pas l'autre.
+
+**Le contrat est publié et vivant.** Son schéma et ses clés de vérification
+publiques sont servis par l'API ; le dépôt porte les fichiers de schéma
+versionnés — **la v0.1, que le point public sert aujourd'hui, et la v0.2** — et
+un consommateur de référence parcourt les huit étapes, de la réception d'un
+contrat à la conservation d'un reçu auditable.
+
+### Pour aller plus loin, dans cet ordre
+
+**[Contrat d'interopérabilité](https://github.com/neomundi-io/neomundi-measurement-interoperability)** → **[Schémas JSON](schemas/)** →
+**[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Confidentialité](#confidentialité)** →
+**[Règlement IA européen](#règlement-ia-européen)** →
+**[Pilotes](https://neomundi.io/pilots)** → **[Preuves](#preuves)**
+
+### Confidentialité
+
+**Une architecture, et elle se vérifie au lieu de se promettre.** Le contrat
+d'interopérabilité est construit pour que **ni les invites brutes, ni les
+réponses brutes, ni les identifiants de fournisseur n'y circulent** — un
+consommateur peut le contrôler avant de stocker quoi que ce soit. L'API en
+lecture seule de cet instrument applique la même règle : vous obtenez des
+empreintes et des longueurs, jamais le texte.
+
+Le contrat n'exige pas davantage la divulgation de vos propres politiques, de
+vos seuils ou de vos règles de décision : il porte sur l'**interface
+partagée**, pas sur votre logique interne. La
+[politique de confidentialité](https://neomundi.io/privacy) publiée couvre ce
+que l'architecture, elle, ne couvre pas.
+
+### Règlement IA européen
+
+Les organisations qui travaillent sous le règlement IA européen doivent
+**montrer que des contrôles existaient et que le comportement a été observé**.
+C'est précisément la matière que NeoMundi produit : des mesures d'exécution
+horodatées, leur couverture, ce qui n'a pas pu être mesuré, et un registre
+qu'un tiers peut vérifier.
+
+Ce qu'il ne fait pas, c'est décider. **Aucune évaluation de conformité, aucune
+certification, aucun verdict juridique** — voir ci-dessous.
+
+### Ce que cela n'établit pas
+
+Les limites qui comptent, rassemblées en un seul endroit :
+
+- **Aucune compatibilité universelle.** Il n'existe ni adaptateur universel, ni
+  greffon pour une plateforme donnée. L'interopérabilité passe par le contrat,
+  et une architecture doit pouvoir le consommer.
+- **Aucune conformité certifiée.** NeoMundi produit des preuves ; il ne
+  détermine pas si un système d'IA est juridiquement conforme, et ne réalise ni
+  évaluation de conformité, ni certification.
+- **Le SDK et le connecteur MCP sont expérimentaux.** Le SDK cible une version
+  de mesure antérieure à celle que cet instrument audite : mêler les résultats
+  des deux dans une même série briserait la règle de comparabilité. Le SDK
+  n'est pas publié sur un index de paquets ; le transport du connecteur MCP est
+  validé, son contrat de mesure ne l'est pas encore en production.
+- **Un pilote publié reste un pilote.** [NeoMundi × OASSE](https://github.com/neomundi-io/use-case-oasse-runtime-governance) porte ses
+  propres preuves publiques et dit franchement ce qu'il **n'établit pas** : ni
+  maturité de production, ni interopérabilité universelle.
 
 ---
 
@@ -200,23 +281,13 @@ Ensuite : **la Station elle-même**, à **<https://station.neomundi.org>** — v
 
 ### Intégrations
 
-**Il en existe deux, toutes deux expérimentales. Ce qui suit est ce qu'elles
-font aujourd'hui — pas une feuille de route.**
+Le SDK, le connecteur MCP et le contrat d'interopérabilité sont décrits
+ensemble sous **[Conçu pour l'interopérabilité](#conçu-pour-linteropérabilité)**,
+avec leur statut et leurs limites.
 
-| | |
-|---|---|
-| [**neomundi-python-sdk**](https://github.com/neomundi-io/neomundi-python-sdk) | Appelle l'API de mesure directement, sans Station. **Non publié sur un index de paquets** : l'installation se fait depuis les sources. |
-| [**neomundi-measurement-mcp**](https://github.com/neomundi-io/neomundi-measurement-mcp) | Expose un unique outil `measure_execution`, pour qu'un agent puisse mesurer ce qu'il a produit. **Transport validé ; son contrat de mesure ne l'est pas encore en production.** |
-
-**Une mise en garde compte plus que les autres, et elle est pratique avant
-d'être juridique.** Le SDK cible une version de mesure **antérieure** à celle
-que cet instrument audite : mêler les résultats des deux dans une même série
-briserait la règle de comparabilité **sans vous avertir**. Gardez-les dans des
-séries distinctes.
-
-**Ni l'un ni l'autre ne vous accorde de licence.** Le connecteur MCP n'a
-aucun fichier de licence ; le SDK porte une mention disant que le choix n'est
-pas arbitré. Voir [Licence](#licence).
+**Ni le SDK ni le connecteur MCP ne vous accorde de licence.** Le connecteur
+MCP n'a aucun fichier de licence ; le SDK porte une mention disant que le choix
+n'est pas arbitré. Voir [Licence](#licence).
 
 ---
 
