@@ -18,7 +18,10 @@ répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 [![Licence : tous droits réservés](https://img.shields.io/badge/Licence-tous_droits_r%C3%A9serv%C3%A9s-6b7280?style=flat-square)](#licence)
 
 **[Live Station](https://station.neomundi.org)** ·
+[Commencer](START_HERE.fr.md) ·
 [Documentation](#documentation) ·
+[Glossaire](GLOSSARY.fr.md) ·
+[Feuille de route](ROADMAP.fr.md) ·
 [Schémas](schemas/) ·
 [Contrat d'interopérabilité](#conçu-pour-linteropérabilité) ·
 [Expériences](#expériences) ·
@@ -243,6 +246,9 @@ style.
 ---
 
 ## Documentation
+
+[**Commencer →**](START_HERE.fr.md) · [Glossaire](GLOSSARY.fr.md) · [Feuille de route](ROADMAP.fr.md)
+
 
 **Disponible dès maintenant — les contrats d'enregistrement.**
 [`schemas/`](schemas/) porte les **15 documents JSON Schema** qui définissent
