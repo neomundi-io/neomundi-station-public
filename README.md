@@ -18,7 +18,10 @@ that answer was worth, and proof a third party can check.**
 [![License: all rights reserved](https://img.shields.io/badge/License-all_rights_reserved-6b7280?style=flat-square)](#licence)
 
 **[Live Station](https://station.neomundi.org)** ·
+[Start here](START_HERE.md) ·
 [Documentation](#documentation) ·
+[Glossary](GLOSSARY.md) ·
+[Roadmap](ROADMAP.md) ·
 [Schemas](schemas/) ·
 [Interop Contract](#built-for-interoperability) ·
 [Experiments](#experiments) ·
@@ -234,6 +237,9 @@ Those are rules of the instrument, not editorial caution.
 ---
 
 ## Documentation
+
+[**Start here →**](START_HERE.md) · [Glossary](GLOSSARY.md) · [Roadmap](ROADMAP.md)
+
 
 **Available now — the record contracts.** [`schemas/`](schemas/) carries the
 **15 JSON Schema documents** that define every entry the ledger accepts:
