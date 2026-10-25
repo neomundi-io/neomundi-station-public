@@ -20,6 +20,7 @@ that answer was worth, and proof a third party can check.**
 **[Live Station](https://station.neomundi.org)** ·
 [Start here](START_HERE.md) ·
 [Documentation](#documentation) ·
+[Explore Evidence](EVIDENCE.md) ·
 [Glossary](GLOSSARY.md) ·
 [Roadmap](ROADMAP.md) ·
 [Schemas](schemas/) ·
@@ -208,6 +209,10 @@ A number without its provenance is not a measurement, so it waits.
 ---
 
 ## Evidence
+
+[**Explore pilots, Observatory work, methods and historical evidence →**](EVIDENCE.md)
+
+This section describes Station's ledger. The library above indexes earlier evidence and its limits; those results are not relabelled as Station results.
 
 The ledger is **add-only and sealed entry to entry**: each record carries the
 fingerprint of the one before it. Nothing is modified or deleted; a correction
