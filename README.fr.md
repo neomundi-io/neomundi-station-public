@@ -20,6 +20,7 @@ répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 **[Live Station](https://station.neomundi.org)** ·
 [Commencer](START_HERE.fr.md) ·
 [Documentation](#documentation) ·
+[Explorer les preuves](EVIDENCE.fr.md) ·
 [Glossaire](GLOSSARY.fr.md) ·
 [Feuille de route](ROADMAP.fr.md) ·
 [Schémas](schemas/) ·
@@ -215,6 +216,10 @@ aujourd'hui.** Un chiffre sans sa provenance n'est pas une mesure : il attend.
 ---
 
 ## Preuves
+
+[**Explorer les pilotes, l'Observatoire, les méthodes et les travaux historiques →**](EVIDENCE.fr.md)
+
+Cette section décrit le registre de Station. La bibliothèque ci-dessus rassemble les preuves antérieures et leurs limites ; celles-ci ne sont pas réattribuées à Station.
 
 Le registre est **en ajout seul et scellé d'entrée en entrée** : chaque
 enregistrement porte l'empreinte du précédent. Rien n'est modifié ni supprimé ;
