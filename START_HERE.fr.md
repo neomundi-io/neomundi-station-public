@@ -3,6 +3,8 @@
 
 Station est l'entrée produit de NeoMundi : un instrument pour observer les réponses de l'IA dans des conditions déclarées et examiner les mesures et preuves associées.
 
+[**Explorer toutes les preuves →**](EVIDENCE.fr.md)
+
 ## Choisir son parcours
 | Votre objectif | À consulter |
 |---|---|
