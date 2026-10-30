@@ -6,8 +6,8 @@
 
 ### Quand l'IA répond, NeoMundi mesure.
 
-**Une couche de mesure indépendante pour les systèmes d'IA — ce qui a été
-répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
+**Un instrument indépendant pour les systèmes d'IA — ce qui a été répondu,
+ce qui a pu être mesuré et des preuves qu'un tiers peut vérifier.**
 
 [![Métrologie des systèmes d'IA](https://img.shields.io/badge/M%C3%A9trologie-syst%C3%A8mes_d'IA-475569?style=flat-square)](#ce-que-ça-fait-simplement)
 [![Schémas JSON : 15](https://img.shields.io/badge/Sch%C3%A9mas_JSON-15-0f766e?style=flat-square)](schemas/)
@@ -19,6 +19,7 @@ répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 
 **[Live Station](https://station.neomundi.org)** ·
 [Commencer](START_HERE.fr.md) ·
+[Runtime Measurement](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md) ·
 [Documentation](#documentation) ·
 [Explorer les preuves](EVIDENCE.fr.md) ·
 [Glossaire](GLOSSARY.fr.md) ·
@@ -28,7 +29,8 @@ répondu, ce que la réponse valait, et une preuve qu'un tiers peut vérifier.**
 [Expériences](#expériences) ·
 [SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
 [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
-[Pilotes](https://neomundi.io)
+[Cas d'usage](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md) ·
+[Créer un compte](https://controltower.neomundi.io/welcome)
 
 <sub>Commencez par les **15 contrats d'enregistrement** : exactement ce qui est
 consigné pour chaque réponse d'une IA — le modèle réellement servi, les
@@ -104,7 +106,7 @@ contrat à la conservation d'un reçu auditable.
 **[Contrat d'interopérabilité](https://github.com/neomundi-io/neomundi-measurement-interoperability)** → **[Schémas JSON](schemas/)** →
 **[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Confidentialité](#confidentialité)** →
 **[Règlement IA européen](#règlement-ia-européen)** →
-**[Pilotes](https://neomundi.io/pilots)** → **[Preuves](#preuves)**
+**[Pilotes](https://neomundi.io/pilots-use-cases/)** → **[Preuves](#preuves)**
 
 ### Confidentialité
 
@@ -118,7 +120,7 @@ empreintes et des longueurs, jamais le texte.
 Le contrat n'exige pas davantage la divulgation de vos propres politiques, de
 vos seuils ou de vos règles de décision : il porte sur l'**interface
 partagée**, pas sur votre logique interne. La
-[politique de confidentialité](https://neomundi.io/privacy) publiée couvre ce
+[politique de confidentialité](https://neomundi.io/privacy-policy/) publiée couvre ce
 que l'architecture, elle, ne couvre pas.
 
 ### Règlement IA européen
