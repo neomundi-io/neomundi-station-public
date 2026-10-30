@@ -6,8 +6,8 @@
 
 ### When AI responds, NeoMundi measures.
 
-**An independent measurement layer for AI systems — what was answered, what
-that answer was worth, and proof a third party can check.**
+**An independent instrument for AI systems — what was answered, what could be
+measured, and evidence a third party can check.**
 
 [![Metrology for AI systems](https://img.shields.io/badge/Metrology-for_AI_systems-475569?style=flat-square)](#what-it-does-in-plain-terms)
 [![JSON Schemas: 15](https://img.shields.io/badge/JSON_Schemas-15-0f766e?style=flat-square)](schemas/)
@@ -19,6 +19,7 @@ that answer was worth, and proof a third party can check.**
 
 **[Live Station](https://station.neomundi.org)** ·
 [Start here](START_HERE.md) ·
+[Runtime Measurement](https://github.com/neomundi-io/neomundi-runtime-measurement) ·
 [Documentation](#documentation) ·
 [Explore Evidence](EVIDENCE.md) ·
 [Glossary](GLOSSARY.md) ·
@@ -28,7 +29,8 @@ that answer was worth, and proof a third party can check.**
 [Experiments](#experiments) ·
 [SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
 [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
-[Pilots](https://neomundi.io)
+[Use Cases](https://github.com/neomundi-io/neomundi-use-cases) ·
+[Create an Account](https://controltower.neomundi.io/welcome)
 
 <sub>Start with the **15 record contracts**: exactly what gets written down for
 every answer an AI gives — the model actually served, the parameters that took
@@ -100,7 +102,7 @@ auditable receipt.
 
 **[Interop Contract](https://github.com/neomundi-io/neomundi-measurement-interoperability)** → **[JSON Schemas](schemas/)** →
 **[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Privacy](#privacy)** →
-**[EU AI Act](#eu-ai-act)** → **[Pilots](https://neomundi.io/pilots)** →
+**[EU AI Act](#eu-ai-act)** → **[Pilots](https://neomundi.io/pilots-use-cases/)** →
 **[Evidence](#evidence)**
 
 ### Privacy
@@ -113,7 +115,7 @@ you get fingerprints and lengths, never the text.
 
 The contract also requires no disclosure of your own policies, thresholds or
 decision rules: it concerns the **shared interface**, not your internal logic.
-The published [privacy policy](https://neomundi.io/privacy) covers what the
+The published [privacy policy](https://neomundi.io/privacy-policy/) covers what the
 architecture itself does not.
 
 ### EU AI Act
