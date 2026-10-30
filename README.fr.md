@@ -376,7 +376,7 @@ construit pour refuser les trois.
 Il n'y a aucun code à corriger ici. Ce qui est utile, c'est **un schéma qui
 décrit mal ce que le registre consigne**, une mesure qui ne mesure pas ce
 qu'elle prétend, ou une affirmation de ce dépôt que rien n'établit. Voir
-[`CONTRIBUTING.md`](CONTRIBUTING.md) — et noter qu'aucune licence ne couvre une
+[`CONTRIBUTING.fr.md`](CONTRIBUTING.fr.md) — et noter qu'aucune licence ne couvre une
 contribution aujourd'hui : ouvrez une issue avant d'investir du temps.
 
 ---

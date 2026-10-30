@@ -1,66 +1,49 @@
-# Contribuer — ce qui est possible ici, et ce qui ne l'est pas
+**English** · [Français](CONTRIBUTING.fr.md)
 
-Merci de l'intérêt. **Lisez ce fichier avant d'ouvrir quoi que ce soit** : ce
-dépôt n'accepte pas le genre de contribution auquel un dépôt public fait
-normalement penser.
+# Contributing — what is possible here, and what is not
 
-> **Avertissement juridique.** Aucune licence n'est déclarée sur ce dépôt :
-> **tous droits réservés**. Une contribution n'est donc **pas** encadrée par une
-> licence open source, et aucun accord de contribution n'existe à ce jour.
-> **Avant d'investir du temps, ouvrez une issue** — nous ne voulons pas accepter
-> un travail dont le statut serait ambigu.
+Thank you for your interest. **Read this file before opening anything**: this repository does not accept the kind of contribution normally associated with a public repository.
 
-## Ce que ce dépôt est
+> **Legal notice.** No licence is declared for this repository: **all rights reserved**. A contribution is therefore **not** covered by an open-source licence, and no contribution agreement currently exists. **Before investing time, open an issue** — we do not want to accept work whose status would be ambiguous.
 
-**La surface publique d'un instrument de mesure.** Pas une bibliothèque, pas un
-produit à installer, pas une démonstration.
+## What this repository is
 
-🔴 **Il ne contient pas l'implémentation.** Celle-ci est privée. Il n'y a donc
-**ni code à corriger, ni test à écrire, ni dépendance à mettre à jour** ici, et
-une *pull request* qui en proposerait serait refusée — non par principe, mais
-parce qu'elle n'aurait rien à modifier.
+**The public surface of a measurement instrument.** Not a library, not a product to install, and not a demonstration.
 
-## Ce qui est utile, et par ordre de valeur
+🔴 **It does not contain the implementation.** The implementation is private. There is therefore **no code to fix, test to write or dependency to update** here, and a pull request proposing one would be refused — not as a matter of principle, but because it would have nothing to modify.
 
-| | Ce que vous pouvez signaler | Pourquoi c'est précieux |
+## What is useful, in order of value
+
+| | What you can report | Why it matters |
 |---|---|---|
-**1** | 🔴 **Un schéma qui décrit mal ce que le registre consigne** — un champ obligatoire qui ne l'est pas, une contrainte absente, une description ambiguë | Un tiers qui vérifie une preuve s'appuie sur ces contrats. **S'ils mentent, sa vérification ne vaut rien** |
-**2** | **Un défaut scientifique** — une mesure qui ne mesure pas ce qu'elle dit, une série qui mêlerait deux clés de comparabilité, un zéro pris pour une mesure | Ce sont les signalements que nous cherchons le plus |
-**3** | **Une affirmation non étayée dans la documentation** — une capacité annoncée que rien n'établit, un chiffre sans provenance | Ce dépôt a pour règle qu'un chiffre porte sa provenance. Prenez-nous en défaut |
-**4** | **Une incohérence entre ce dépôt et la Station** — ce qui est écrit ici et ce que l'instance fait | Les deux doivent dire la même chose |
-**5** | **Une faute de langue ou un lien mort** | Utile, et bienvenu, mais c'est le poste le moins critique |
+| **1** | 🔴 **A schema that inaccurately describes what the registry records** — a field marked required when it is not, a missing constraint, an ambiguous description | A third party verifying evidence relies on these contracts. **If they misrepresent the record, the verification is worthless** |
+| **2** | **A scientific defect** — a measure that does not measure what it claims, a series that mixes two comparability keys, a zero treated as a measurement | These are the reports we value most |
+| **3** | **An unsupported claim in the documentation** — an advertised capability established by nothing, a number without provenance | This repository requires every number to carry its provenance. Hold us to that rule |
+| **4** | **An inconsistency between this repository and Station** — what is written here differs from what the instance does | Both must say the same thing |
+| **5** | **A language error or dead link** | Useful and welcome, but the least critical category |
 
-**Une faille de sécurité ne passe JAMAIS par une issue :**
-[`SECURITY.md`](SECURITY.md).
+**NEVER report a security vulnerability through an issue:** see [SECURITY.md](SECURITY.md).
 
-## Comment signaler
+## How to report
 
-Ouvrez une **issue**, et dites trois choses :
+Open an **issue** and state three things:
 
-1. **ce que vous avez lu ou appelé** — le fichier, ou la route ;
-2. **ce que vous en attendiez** ;
-3. **ce que vous avez observé**, avec de quoi le reproduire.
+1. **what you read or called** — the file or route;
+2. **what you expected**;
+3. **what you observed**, with enough information to reproduce it.
 
-Si vous écrivez *« vérifié »*, **montrez la sortie.** C'est une règle que nous
-nous appliquons, et nous vous l'appliquons aussi.
+If you write *“verified”*, **show the output.** We apply that rule to ourselves, and we apply it to you as well.
 
-## Ce qui sera refusé
+## What will be refused
 
-- **une modification des schémas sans démonstration.** Un schéma décrit un
-  registre réel : le changer sans montrer ce que le registre écrit vraiment
-  casserait le contrat au lieu de le corriger ;
-- **une proposition de licence open source.** Le régime juridique est une
-  décision ouverte, et elle ne se tranche pas dans une *pull request* ;
-- **un score composite, un classement de modèles, une agrégation par-dessus une
-  clé de comparabilité.** L'instrument refuse les trois, par construction ;
-- **un secret, une clé, un jeton** — même factice s'il est plausible ;
-- **un contenu de jeu de données tiers.** Seuls les manifestes circulent, avec
-  leurs empreintes et leur licence déclarée ;
-- **une valeur par défaut qui masque une absence.** `null` n'est pas zéro ;
-- **une affirmation de capacité non étayée par une exécution.**
+- **a schema change without a demonstration.** A schema describes a real registry: changing it without showing what the registry actually writes would break the contract instead of correcting it;
+- **an open-source licence proposal.** The legal regime is an open decision, and it will not be settled in a pull request;
+- **a composite score, a model ranking, or an aggregation across a comparability key.** The instrument rejects all three by design;
+- **a secret, key or token** — even a fake one if it looks plausible;
+- **third-party dataset content.** Only manifests circulate, together with their fingerprints and declared licence;
+- **a default value that hides an absence.** **null is not zero**;
+- **a capability claim unsupported by an execution.**
 
-## Ce que nous ne vous demanderons pas
+## What we will not ask of you
 
-De la vitesse. Ce dépôt avance en montrant ses preuves, et un signalement qui
-prend un jour de plus pour établir un fait par exécution plutôt que par lecture
-est un meilleur signalement.
+Speed. This repository moves forward by showing its evidence, and a report that takes one extra day to establish a fact through execution rather than reading is a better report.
