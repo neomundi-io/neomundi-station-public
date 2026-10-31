@@ -325,6 +325,16 @@ demander la permission à personne. Pour un travail sur vos propres données,
 
 ---
 
+## Infrastructure et programmes de soutien
+
+La démarche indépendante d'observation et de mesure des IA de NeoMundi bénéficie de soutiens en matière d'infrastructure et de programmes d'accompagnement des startups :
+
+- **[Infomaniak](https://www.infomaniak.com/)** — Partenaire infrastructure soutenant le développement de l'instrument indépendant d'observation des IA de NeoMundi.
+- **[OVHcloud Startup Program](https://startup.ovhcloud.com/)** — NeoMundi participe au programme d'accompagnement des startups.
+- **[NVIDIA Inception](https://www.nvidia.com/en-us/startups/)** — NeoMundi est membre du programme NVIDIA Inception destiné aux startups innovantes.
+
+Ces relations soutiennent le développement de NeoMundi et n'impliquent ni certification ni approbation de ses résultats scientifiques.
+
 ## Licence
 
 **Aucune licence n'est déclarée sur ce dépôt, et c'est une décision plutôt
