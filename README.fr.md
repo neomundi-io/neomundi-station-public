@@ -155,6 +155,15 @@ Les limites qui comptent, rassemblées en un seul endroit :
 
 ---
 
+## Confiance, conformité et protection des données
+
+Station est le parcours d'observation et de preuve : elle conserve la réponse et le contexte de mesure dans son registre interne, tandis que son interface en lecture seule masque le texte brut des questions et réponses. Cette frontière d'interface ne signifie pas que le texte brut n'a jamais été traité ou stocké en amont.
+
+- [**AI Act & RGPD — preuves opérationnelles**](https://github.com/neomundi-io/ai-act-rgpd/blob/main/README_FR.md) — explique comment les observations horodatées et le contexte de contrôle peuvent soutenir une démarche de conformité sans établir une conformité ni une certification.
+- [**Protection des données et confidentialité**](https://github.com/neomundi-io/neomundi-io-data-protection/blob/main/README_FR.md) — distingue le registre interne de Station, sa divulgation en lecture seule, les flux de mesure et d'évaluation, et les questions de conservation propres au déploiement.
+
+Station fournit des preuves, pas une autorisation : mesure, évaluation de référence, politique et décision humaine restent séparées.
+
 ## Comment ça fonctionne
 
 | RÉPONSE IA | OBSERVATION | MESURE | PREUVE | DÉCISION HUMAINE |
