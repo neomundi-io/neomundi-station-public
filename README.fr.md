@@ -321,6 +321,14 @@ demander la permission à personne. Pour un travail sur vos propres données,
 
 ---
 
+## Intégrations partenaires — pilotes privés
+
+**Hivolvia / Stéphane Lauga — connecteur tiers (pilote privé).** Stéphane Lauga indique avoir développé et livré un connecteur Rust multiplateforme pour la supervision des modèles et services d'IA, adapté à l'API OBS de NeoMundi. L'objectif d'intégration est de rendre les mesures NeoMundi exploitables aux côtés des signaux d'observabilité existants, notamment dans une supervision orientée Prometheus. Il s'agit d'une **réalisation indépendante**, non maintenue par NeoMundi.
+
+**Statut :** développement et échange avec l'API rapportés par l'auteur ; qualification indépendante avec la version actuelle de l'API de mesure, revue de sécurité et accord signé de mise à disposition en pilote **en attente**. Aucun installateur ni code source n'est diffusé ici. La propriété, la maintenance et le support pilote restent chez le développeur. Cette mention ne vaut ni certification d'interopérabilité ni validation de sécurité ou de mise en production. La formulation et l'attribution publiques restent soumises à confirmation définitive.
+
+Voir l'[index des pilotes et cas d'usage](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md#index-des-pilotes).
+
 ## Infrastructure et programmes de soutien
 
 La démarche indépendante d'observation et de mesure des IA de NeoMundi bénéficie de soutiens en matière d'infrastructure et de programmes d'accompagnement des startups :
