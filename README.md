@@ -101,32 +101,32 @@ auditable receipt.
 ### Go deeper, in this order
 
 **[Interop Contract](https://github.com/neomundi-io/neomundi-measurement-interoperability)** → **[JSON Schemas](schemas/)** →
-**[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Privacy](#privacy)** →
-**[EU AI Act](#eu-ai-act)** → **[Pilots](https://neomundi.io/pilots-use-cases/)** →
+**[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Trust, compliance & data protection](#trust-compliance-data-protection)** →
+**[Pilots](https://neomundi.io/pilots-use-cases/)** →
 **[Evidence](#evidence)**
 
-### Privacy
+<a id="privacy"></a>
+<a id="eu-ai-act"></a>
+<a id="trust-compliance-data-protection"></a>
 
-**An architecture, and it is verifiable rather than promised.** The
-interoperability contract is built so that **raw prompts, raw model responses
-and raw provider identifiers never travel in it** — a consumer can check that
-before storing anything. This instrument's read-only API applies the same rule:
-you get fingerprints and lengths, never the text.
+## Trust, Compliance & Data Protection
 
-The contract also requires no disclosure of your own policies, thresholds or
-decision rules: it concerns the **shared interface**, not your internal logic.
-The published [privacy policy](https://neomundi.io/privacy-policy/) covers what the
-architecture itself does not.
+Station produces measurements, observations and reviewable evidence: timestamped runtime records, coverage, unavailable states and an add-only ledger whose chain can be checked. These artifacts may help an organization document that behavior was observed and controls were available.
 
-### EU AI Act
+The data boundaries remain distinct:
 
-Organisations working under the EU AI Act have to **show that controls existed
-and that behaviour was observed**. That is the material NeoMundi produces:
-timestamped runtime measurements, their coverage, what could not be measured,
-and a ledger that a third party can verify.
+- Station preserves the answer and measurement context in its internal ledger;
+- its read-only interface returns fingerprints and lengths, not raw question or answer text;
+- the interoperability contract excludes raw prompts, raw model responses and raw provider identifiers by schema design;
+- restricted disclosure does not prove that raw text was never transmitted, processed or stored upstream; evaluator destinations and retention depend on the deployment.
 
-What it does not do is decide. **No conformity assessment, no certification,
-no legal verdict** — see below.
+This evidence can support governance or compliance work, but Station does not perform a conformity assessment, issue a certification or provide a legal verdict. A measurement is not an authorization: reference evaluation, policy and human decision remain separate.
+
+- [**AI Act & GDPR — Operational Evidence**](https://github.com/neomundi-io/ai-act-rgpd)
+- [**Data Protection & Confidentiality**](https://github.com/neomundi-io/neomundi-io-data-protection)
+- [Published privacy policy](https://neomundi.io/privacy-policy/)
+
+The explicit anchors above preserve earlier links to [Privacy](#privacy) and [EU AI Act](#eu-ai-act).
 
 ### What this does not establish
 
@@ -148,15 +148,6 @@ The limits worth knowing, in one place:
   production readiness nor universal interoperability.
 
 ---
-
-## Trust, Compliance & Data Protection
-
-Station is the observation-and-evidence path: it preserves the answer and measurement context in its internal ledger while its read-only interface withholds raw question and answer text. That interface boundary does not imply that raw text was never processed or stored upstream.
-
-- [**AI Act & GDPR — Operational Evidence**](https://github.com/neomundi-io/ai-act-rgpd) — explains how timestamped observations and control context may support compliance work without establishing conformity or certification.
-- [**Data Protection & Confidentiality**](https://github.com/neomundi-io/neomundi-io-data-protection) — distinguishes Station's internal records, read-only disclosure, measurement/evaluator flows and deployment-specific retention questions.
-
-Station provides evidence, not an authorization: measurement, reference evaluation, policy and human decision remain separate.
 
 ## How it works
 
