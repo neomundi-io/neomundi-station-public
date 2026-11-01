@@ -104,35 +104,31 @@ contrat à la conservation d'un reçu auditable.
 ### Pour aller plus loin, dans cet ordre
 
 **[Contrat d'interopérabilité](https://github.com/neomundi-io/neomundi-measurement-interoperability)** → **[Schémas JSON](schemas/)** →
-**[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Confidentialité](#confidentialité)** →
-**[Règlement IA européen](#règlement-ia-européen)** →
+**[SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)** → **[Confiance, conformité et protection des données](#confiance-conformite-protection-donnees)** →
 **[Pilotes](https://neomundi.io/pilots-use-cases/)** → **[Preuves](#preuves)**
 
-### Confidentialité
+<a id="confidentialité"></a>
+<a id="règlement-ia-européen"></a>
+<a id="confiance-conformite-protection-donnees"></a>
 
-**Une architecture, et elle se vérifie au lieu de se promettre.** Le contrat
-d'interopérabilité est construit pour que **ni les invites brutes, ni les
-réponses brutes, ni les identifiants de fournisseur n'y circulent** — un
-consommateur peut le contrôler avant de stocker quoi que ce soit. L'API en
-lecture seule de cet instrument applique la même règle : vous obtenez des
-empreintes et des longueurs, jamais le texte.
+## Confiance, conformité et protection des données
 
-Le contrat n'exige pas davantage la divulgation de vos propres politiques, de
-vos seuils ou de vos règles de décision : il porte sur l'**interface
-partagée**, pas sur votre logique interne. La
-[politique de confidentialité](https://neomundi.io/privacy-policy/) publiée couvre ce
-que l'architecture, elle, ne couvre pas.
+Station produit des mesures, des observations et des preuves examinables : enregistrements runtime horodatés, couverture, états indisponibles et registre add-only dont la chaîne peut être contrôlée. Ces artefacts peuvent aider une organisation à documenter qu'un comportement a été observé et que des contrôles étaient disponibles.
 
-### Règlement IA européen
+Les frontières de données restent distinctes :
 
-Les organisations qui travaillent sous le règlement IA européen doivent
-**montrer que des contrôles existaient et que le comportement a été observé**.
-C'est précisément la matière que NeoMundi produit : des mesures d'exécution
-horodatées, leur couverture, ce qui n'a pas pu être mesuré, et un registre
-qu'un tiers peut vérifier.
+- Station conserve la réponse et le contexte de mesure dans son registre interne ;
+- son interface en lecture seule restitue des empreintes et des longueurs, pas le texte brut des questions ou réponses ;
+- le contrat d'interopérabilité exclut par conception les prompts bruts, réponses brutes et identifiants bruts de fournisseur ;
+- une divulgation restreinte ne prouve pas que le texte brut n'a jamais été transmis, traité ou stocké en amont ; les destinations des évaluateurs et la conservation dépendent du déploiement.
 
-Ce qu'il ne fait pas, c'est décider. **Aucune évaluation de conformité, aucune
-certification, aucun verdict juridique** — voir ci-dessous.
+Ces preuves peuvent soutenir une démarche de gouvernance ou de conformité, mais Station ne réalise aucune évaluation de conformité, ne délivre aucune certification et ne fournit aucun verdict juridique. Une mesure n'est pas une autorisation : évaluation de référence, politique et décision humaine restent séparées.
+
+- [**AI Act & RGPD — preuves opérationnelles**](https://github.com/neomundi-io/ai-act-rgpd/blob/main/README_FR.md)
+- [**Protection des données et confidentialité**](https://github.com/neomundi-io/neomundi-io-data-protection/blob/main/README_FR.md)
+- [Politique de confidentialité publiée](https://neomundi.io/privacy-policy/)
+
+Les ancres explicites ci-dessus préservent les anciens liens vers [Confidentialité](#confidentialité) et [Règlement IA européen](#règlement-ia-européen).
 
 ### Ce que cela n'établit pas
 
@@ -154,15 +150,6 @@ Les limites qui comptent, rassemblées en un seul endroit :
   maturité de production, ni interopérabilité universelle.
 
 ---
-
-## Confiance, conformité et protection des données
-
-Station est le parcours d'observation et de preuve : elle conserve la réponse et le contexte de mesure dans son registre interne, tandis que son interface en lecture seule masque le texte brut des questions et réponses. Cette frontière d'interface ne signifie pas que le texte brut n'a jamais été traité ou stocké en amont.
-
-- [**AI Act & RGPD — preuves opérationnelles**](https://github.com/neomundi-io/ai-act-rgpd/blob/main/README_FR.md) — explique comment les observations horodatées et le contexte de contrôle peuvent soutenir une démarche de conformité sans établir une conformité ni une certification.
-- [**Protection des données et confidentialité**](https://github.com/neomundi-io/neomundi-io-data-protection/blob/main/README_FR.md) — distingue le registre interne de Station, sa divulgation en lecture seule, les flux de mesure et d'évaluation, et les questions de conservation propres au déploiement.
-
-Station fournit des preuves, pas une autorisation : mesure, évaluation de référence, politique et décision humaine restent séparées.
 
 ## Comment ça fonctionne
 
