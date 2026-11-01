@@ -149,6 +149,15 @@ The limits worth knowing, in one place:
 
 ---
 
+## Trust, Compliance & Data Protection
+
+Station is the observation-and-evidence path: it preserves the answer and measurement context in its internal ledger while its read-only interface withholds raw question and answer text. That interface boundary does not imply that raw text was never processed or stored upstream.
+
+- [**AI Act & GDPR — Operational Evidence**](https://github.com/neomundi-io/ai-act-rgpd) — explains how timestamped observations and control context may support compliance work without establishing conformity or certification.
+- [**Data Protection & Confidentiality**](https://github.com/neomundi-io/neomundi-io-data-protection) — distinguishes Station's internal records, read-only disclosure, measurement/evaluator flows and deployment-specific retention questions.
+
+Station provides evidence, not an authorization: measurement, reference evaluation, policy and human decision remain separate.
+
 ## How it works
 
 | AI RESPONSE | OBSERVATION | MEASUREMENT | EVIDENCE | HUMAN DECISION |
