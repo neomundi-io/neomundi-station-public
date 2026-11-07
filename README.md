@@ -2,44 +2,28 @@
 
 <sub><b>English</b> · <a href="README.fr.md">Français</a></sub>
 
-[**Measurement**](https://github.com/neomundi-io/neomundi-runtime-measurement) · [**Station**](https://github.com/neomundi-io/neomundi-station-public) · [**Evidence**](https://github.com/neomundi-io/neomundi-evidence-public) · [**API**](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md) · [**SDK**](https://github.com/neomundi-io/neomundi-python-sdk) · [**MCP**](https://github.com/neomundi-io/neomundi-measurement-mcp) · [**Use Cases**](https://github.com/neomundi-io/neomundi-use-cases) · [**ControlTower**](https://controltower.neomundi.io/welcome)
-
 # NeoMundi Station
 
-### When AI responds, NeoMundi measures.
+### Observe AI behaviour in context.
 
-**An independent instrument for AI systems — what was answered, what could be
-measured, and evidence a third party can check.**
+**Run controlled observation campaigns, preserve their conditions and export auditable records.**
 
-[![Metrology for AI systems](https://img.shields.io/badge/Metrology-for_AI_systems-475569?style=flat-square)](#what-it-does-in-plain-terms)
-[![JSON Schemas: 15](https://img.shields.io/badge/JSON_Schemas-15-0f766e?style=flat-square)](schemas/)
-[![Evidence: hash-chained ledger](https://img.shields.io/badge/Evidence-hash--chained_ledger-475569?style=flat-square)](#evidence)
-[![Interop Contract: RGC](https://img.shields.io/badge/Interop_Contract-RGC-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-interoperability)
-[![Python SDK: experimental](https://img.shields.io/badge/Python_SDK-experimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-python-sdk)
-[![MCP: experimental](https://img.shields.io/badge/MCP-experimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-mcp)
-[![License: all rights reserved](https://img.shields.io/badge/License-all_rights_reserved-6b7280?style=flat-square)](#licence)
+**Measurement → Station → Evidence**
 
-**[Live Station](https://station.neomundi.org)** ·
-[Start here](START_HERE.md) ·
-[Runtime Measurement](https://github.com/neomundi-io/neomundi-runtime-measurement) ·
-[Documentation](#documentation) ·
-[Explore Evidence](EVIDENCE.md) ·
-[Glossary](GLOSSARY.md) ·
-[Roadmap](ROADMAP.md) ·
-[Schemas](schemas/) ·
-[Interop Contract](#built-for-interoperability) ·
-[Experiments](#experiments) ·
-[SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
-[MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
-[Use Cases](https://github.com/neomundi-io/neomundi-use-cases) ·
-[Create an Account](https://controltower.neomundi.io/welcome)
+[![Measurement](https://img.shields.io/badge/Measurement-Measure-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement)
+[![Station](https://img.shields.io/badge/Station-Observe-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public)
+[![Evidence](https://img.shields.io/badge/Evidence-Verify-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-public)
+[![Use cases](https://img.shields.io/badge/Use_cases-Explore-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases)
 
-<sub>Start with the **15 record contracts**: exactly what gets written down for
-every answer an AI gives — the model actually served, the parameters that took
-effect, what was measured, and what could not be. No account, no key, nothing
-to install.</sub>
+**[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Create an account](https://controltower.neomundi.io/welcome)**
 
 </div>
+
+---
+
+## Station access and documentation
+
+[Live Station](https://station.neomundi.org) · [Start here](START_HERE.md) · [Record schemas](schemas/) · [Evidence and work](EVIDENCE.md) · [Interoperability contract](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
 
 ---
 

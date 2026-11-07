@@ -2,44 +2,28 @@
 
 <sub><a href="README.md">English</a> · <b>Français</b></sub>
 
-[**Measurement**](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md) · [**Station**](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md) · [**Evidence**](https://github.com/neomundi-io/neomundi-evidence-public/blob/main/README.fr.md) · [**API**](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md) · [**SDK**](https://github.com/neomundi-io/neomundi-python-sdk) · [**MCP**](https://github.com/neomundi-io/neomundi-measurement-mcp) · [**Cas d’usage**](https://github.com/neomundi-io/neomundi-use-cases) · [**ControlTower**](https://controltower.neomundi.io/welcome)
-
 # NeoMundi Station
 
-### Quand l'IA répond, NeoMundi mesure.
+### Observer le comportement des IA dans leur contexte.
 
-**Un instrument indépendant pour les systèmes d'IA — ce qui a été répondu,
-ce qui a pu être mesuré et des preuves qu'un tiers peut vérifier.**
+**Mener des campagnes d’observation contrôlées, documenter leurs conditions et exporter des dossiers auditables.**
 
-[![Métrologie des systèmes d'IA](https://img.shields.io/badge/M%C3%A9trologie-syst%C3%A8mes_d'IA-475569?style=flat-square)](#ce-que-ça-fait-simplement)
-[![Schémas JSON : 15](https://img.shields.io/badge/Sch%C3%A9mas_JSON-15-0f766e?style=flat-square)](schemas/)
-[![Preuve : registre chaîné](https://img.shields.io/badge/Preuve-registre_cha%C3%AEn%C3%A9-475569?style=flat-square)](#preuves)
-[![Contrat d'interopérabilité : RGC](https://img.shields.io/badge/Interop-RGC-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-interoperability)
-[![SDK Python : expérimental](https://img.shields.io/badge/SDK_Python-exp%C3%A9rimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-python-sdk)
-[![MCP : expérimental](https://img.shields.io/badge/MCP-exp%C3%A9rimental-a16207?style=flat-square)](https://github.com/neomundi-io/neomundi-measurement-mcp)
-[![Licence : tous droits réservés](https://img.shields.io/badge/Licence-tous_droits_r%C3%A9serv%C3%A9s-6b7280?style=flat-square)](#licence)
+**Measurement → Station → Evidence**
 
-**[Live Station](https://station.neomundi.org)** ·
-[Commencer](START_HERE.fr.md) ·
-[Runtime Measurement](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md) ·
-[Documentation](#documentation) ·
-[Explorer les preuves](EVIDENCE.fr.md) ·
-[Glossaire](GLOSSARY.fr.md) ·
-[Feuille de route](ROADMAP.fr.md) ·
-[Schémas](schemas/) ·
-[Contrat d'interopérabilité](#conçu-pour-linteropérabilité) ·
-[Expériences](#expériences) ·
-[SDK](https://github.com/neomundi-io/neomundi-python-sdk) ·
-[MCP](https://github.com/neomundi-io/neomundi-measurement-mcp) ·
-[Cas d'usage](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md) ·
-[Créer un compte](https://controltower.neomundi.io/welcome)
+[![Measurement](https://img.shields.io/badge/Measurement-Mesurer-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md)
+[![Station](https://img.shields.io/badge/Station-Observer-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md)
+[![Evidence](https://img.shields.io/badge/Evidence-Verifier-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-public/blob/main/README.fr.md)
+[![Use cases](https://img.shields.io/badge/Cas_d_usage-Explorer-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md)
 
-<sub>Commencez par les **15 contrats d'enregistrement** : exactement ce qui est
-consigné pour chaque réponse d'une IA — le modèle réellement servi, les
-paramètres qui ont pris effet, ce qui a été mesuré, et ce qui n'a pas pu
-l'être. Aucun compte, aucune clé, rien à installer.</sub>
+**[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Créer un compte](https://controltower.neomundi.io/welcome)**
 
 </div>
+
+---
+
+## Accès et documentation Station
+
+[Station en ligne](https://station.neomundi.org) · [Commencer](START_HERE.fr.md) · [Schémas d’enregistrement](schemas/) · [Preuves et travaux](EVIDENCE.fr.md) · [Contrat d’interopérabilité](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
 
 ---
 
