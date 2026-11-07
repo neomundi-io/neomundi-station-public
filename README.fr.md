@@ -2,6 +2,8 @@
 
 <sub><a href="README.md">English</a> · <b>Français</b></sub>
 
+[**Measurement**](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md) · [**Station**](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md) · [**Evidence**](https://github.com/neomundi-io/neomundi-evidence-public/blob/main/README.fr.md) · [**API**](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md) · [**SDK**](https://github.com/neomundi-io/neomundi-python-sdk) · [**MCP**](https://github.com/neomundi-io/neomundi-measurement-mcp) · [**Cas d’usage**](https://github.com/neomundi-io/neomundi-use-cases) · [**ControlTower**](https://controltower.neomundi.io/welcome)
+
 # NeoMundi Station
 
 ### Quand l'IA répond, NeoMundi mesure.
