@@ -23,7 +23,7 @@
 
 ## Station access and documentation
 
-[Live Station](https://station.neomundi.org) · [Start here](START_HERE.md) · [Record schemas](schemas/) · [Evidence and work](EVIDENCE.md) · [Interoperability contract](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
+[Live Station](https://station.neomundi.org) · [Start here](START_HERE.md) · [Record schemas](schemas/) · [Evidence and work](EVIDENCE.md) · [Interoperability contract](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [Python SDK on PyPI](https://pypi.org/project/neomundi/) (`pip install neomundi`) · [SDK source](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
 
 ---
 
