@@ -6,9 +6,13 @@
 
 ### Observer le comportement des IA dans leur contexte.
 
+Ce dépôt est l'**instrument de campagnes contrôlées** : il exécute des observations dans un contexte déclaré, les conserve avec leur provenance et exporte des dossiers auditables. Il produit des preuves ; il ne réalise aucune évaluation de conformité.
+
+[Architecture produit](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Audit des capacités](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [Tous les composants](https://github.com/neomundi-io/.github)
+
 **Mener des campagnes d’observation contrôlées, documenter leurs conditions et exporter des dossiers auditables.**
 
-**Measurement → Station → Evidence**
+**INSTALL → TRACE → MEASURE → VERIFY → ACT**
 
 [![Measurement](https://img.shields.io/badge/Measurement-Mesurer-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md)
 [![Station](https://img.shields.io/badge/Station-Observer-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md)
@@ -29,7 +33,7 @@
 
 ## La chaîne de produits NeoMundi
 
-**Measurement → Station → Evidence** : trois produits complémentaires, un parcours cohérent pour mesurer le comportement des IA puis contrôler indépendamment les preuves techniques.
+**Measurement → Station → Evidence** : trois produits complémentaires le long de ce parcours, une route cohérente pour mesurer le comportement des IA puis contrôler indépendamment pour mesurer le comportement des IA puis contrôler indépendamment les preuves techniques.
 
 | Étape | Produit | Fonction |
 |---|---|---|
