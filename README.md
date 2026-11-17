@@ -39,6 +39,19 @@
 
 ---
 
+## Built on an architecture you can inspect
+
+Our product promise is backed by documented components, explicit contracts and verifiable
+boundaries. Explore how Station works, what it records, and what it does not claim — every
+capability carries its state 🟢 🟡 🔴 and its limit.
+
+**[Explore Station Architecture →](ARCHITECTURE.md)**
+
+*Station's own architecture, in eight parts. For the chain as a whole, see the
+[NeoMundi product architecture](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md).*
+
+---
+
 ## Station access and documentation
 
 [Live Station](https://station.neomundi.org) · [Start here](START_HERE.md) · [Record schemas](schemas/) · [Evidence and work](EVIDENCE.md) · [Interoperability contract](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [Python SDK on PyPI](https://pypi.org/project/neomundi/) (`pip install neomundi`) · [SDK source](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
@@ -265,7 +278,7 @@ Those are rules of the instrument, not editorial caution.
 
 ## Documentation
 
-[**Start here →**](START_HERE.md) · [Glossary](GLOSSARY.md) · [Roadmap](ROADMAP.md)
+[**Start here →**](START_HERE.md) · [Architecture](ARCHITECTURE.md) · [Glossary](GLOSSARY.md) · [Roadmap](ROADMAP.md)
 
 
 **Available now — the record contracts.** [`schemas/`](schemas/) carries the
