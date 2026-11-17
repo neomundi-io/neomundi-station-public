@@ -442,14 +442,14 @@ the reference file.*
 
 ```mermaid
 flowchart TB
-  OBS["<b>Observation</b><br/>provider · requested model · attestation level<br/>flow · prompt version · dataset + version · params sent"]
+  OBS["<b>Observation</b><br/>provider<br/>requested model<br/>attestation level<br/>flow type<br/>prompt version<br/>dataset + version<br/>params sent"]
 
-  GEN["<b>gen:v1:…</b><br/>generation series<br/><i>what the model was asked to do</i>"]
+  GEN["<b>gen:v1:…</b><br/>generation series<br/><i>what the model</i><br/><i>was asked to do</i>"]
 
-  MEAS["<b>meas:v1:…</b><br/>measurement series<br/>generation + measurement version"]
-  EVAL["<b>eval:v1:…</b><br/>evaluation series<br/>generation + evaluator version"]
+  MEAS["<b>meas:v1:…</b><br/>measurement series<br/>generation<br/>+ measurement version"]
+  EVAL["<b>eval:v1:…</b><br/>evaluation series<br/>generation<br/>+ evaluator version"]
 
-  OUT["Every published signal, rate, baseline or comparison<br/><b>groups by key</b><br/>and crosses one only under a written, validated rule"]
+  OUT["Every published signal, rate,<br/>baseline or comparison<br/><b>groups by key</b><br/>and crosses one only under<br/>a written, validated rule"]
 
   OBS --> GEN
   GEN --> MEAS
