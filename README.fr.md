@@ -10,7 +10,7 @@
 
 **Le bénéfice :** conduisez des campagnes d'observation contrôlées, conservez leurs conditions et leurs mesures, puis exportez des enregistrements traçables. Station ne décide pas de la conformité.
 
-[Architecture produit](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Audit des capacités](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [Tous les composants](https://github.com/neomundi-io/.github)
+[Architecture produit](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Audit des capacités](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [Tous les composants](https://github.com/orgs/neomundi-io/repositories)
 
 **Mener des campagnes d’observation contrôlées, documenter leurs conditions et exporter des dossiers auditables.**
 
