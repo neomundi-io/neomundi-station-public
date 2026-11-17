@@ -148,14 +148,18 @@ read comes from.
 
 ### The six functional components
 
-**Model execution** 🟡 — twelve provider adapters are written: `anthropic`, `aws_bedrock`,
-`cohere`, `deepseek`, `google`, `infomaniak`, `mistral`, `moonshot`, `openai`, `perplexity`,
-`qwen`, `xai`. An adapter that exists is not an operator that has answered: **two operators have
-genuinely answered to date** — Infomaniak (serving Apertus) and Anthropic (`claude-sonnet-5-5`,
-2026-11-16 and 2026-11-17). Two more (`mistral-large-2512`, `kimi-k3`) are catalogue-confirmed
-with no generation. `cohere/command-a-plus-05-2026` is confirmed but **never attests the served
-model**, and `xai/grok-4.20-0309-reasoning` returns an undeclared `400`: neither enters a series,
-because an identifier nothing is known about does not enter a series.
+**Model execution** 🟡 — the Measurement API's declared multi-provider scope is **18 providers**.
+Station's product horizon is to consume supported provider/model configurations across that API
+surface, while retaining the actual served-model attestation and provenance. This is an
+**integration target, not a claim that all 18 providers are connected, exercised or qualified
+in Station today**. The inspected Station implementation contains twelve provider adapters:
+`anthropic`, `aws_bedrock`, `cohere`, `deepseek`, `google`, `infomaniak`, `mistral`,
+`moonshot`, `openai`, `perplexity`, `qwen`, `xai`. Adapter presence is distinct from a
+successful provider execution and from audited end-to-end compatibility. Individual connections
+may remain unfinished; extending coverage is an integration task, not a prerequisite for
+Station's existing observation and campaign functions. The exact 18-provider API inventory
+must be confirmed against the current API contract before presenting a provider-by-provider
+availability matrix.
 
 **Observation capture** 🟢 post-hoc, 🟡 runtime. Two modes, and they never blur. `post_hoc` — the
 default — receives a complete response and then measures it. `runtime` receives timestamped
@@ -197,7 +201,7 @@ writer nor any adapter, and structural tests hold both.
 | **Chain verification** | recompute every link, report anomalies | private · `src/station/ledger/verify.py` | nine anomaly kinds, no verdict | 🟢 it reports; it never qualifies |
 | **Runner** | plan → preflight → execute → measure → evaluate → report | private · `src/station/runner/` — 20 modules | exit codes, `3` = *succeeded with warnings* | 🟢 offline · 🟡 live, on two operators |
 | **Comparability keys** | define what a series is | private · `src/station/runner/comparability.py` | three layers, composition `v1` | 🟢 keys produced and recorded · 🔴 no rule crosses one |
-| **Provider adapters** | one inference surface each | private · `src/station/connectors/providers/` | 12 adapters, one decision record each | 🟡 written 12 · genuinely answered 2 |
+| **Provider adapters** | adapt provider/model calls to Station observation contracts | private · `src/station/connectors/providers/` | 12 adapter implementations inspected; API multi-provider scope: 18 (integration target) | 🟡 provider-specific integration and live qualification incomplete; 18 is not a Station validation count |
 | **Measurement connector** | transport to the measurement API, and mapping | private · `src/station/connectors/neomundi/` | five audits, response `extra="forbid"` | 🟢 audited · 🟡 reopened twice in eleven days |
 | **Reference evaluation** | right / wrong against a frozen dataset | private · `src/station/evaluation/` | `correct` · `incorrect` · `abstention` · `unparseable` | 🟢 for `qcm/1` · 🔴 for `ouvert/1` |
 | **Consultation API** | read the ledger, withhold raw content | private · `src/station/api/` | 6 `GET` + 1 event stream, bearer token | 🟢 deployed · [hosted instance](https://station.neomundi.org) |
@@ -330,6 +334,16 @@ emitted; and any status other than `measured` requires a non-empty reason.
 In all three cases the observation remains, fully remeasurable with no provider call. The guard is
 deliberately loud: the alternative — ignoring unknown keys — would have made both contract
 reopenings invisible, and nobody would have known the contract had moved.
+
+**Measurement 3.5.0 compatibility — qualification pending.** The Station audit materials reviewed
+for this architecture refer to accepted measurement versions `3.3.0` and `3.3.1`. A separate
+API architecture reference identifies `3.5.0` as the production measurement version, but that
+does **not** establish acceptance by Station's audited version whitelist or compatibility with
+the current response schema. Until a fresh end-to-end contract check confirms both, do not
+claim that a live Station observation can be qualified against Measurement `3.5.0`.
+An unsupported version or unrecognised response fields must remain an explicit refusal, while
+the observation is preserved for later remeasurement. Updating and qualifying this compatibility
+is a separate operational task, outside this documentation change.
 
 ### Provenance
 
@@ -666,8 +680,10 @@ These rules govern this repository, the README, the website, sales material and 
 7. **Never write "no client content is kept."** Correct form: *the hosted read-only interface returns
    fingerprints and lengths, never raw question or answer text; the ledger itself retains the
    response.*
-8. **Never describe a written adapter as an operator that has answered.** Twelve adapters exist; two
-   operators have genuinely answered. Say which.
+8. **Never equate provider scope with live qualification.** The API's stated scope is 18
+   providers; the inspected Station code contains twelve provider adapters. Neither count
+   establishes that every integration is connected or that every model has passed a live run.
+   Present 18 as the intended API coverage to absorb, not as a Station validation count.
 9. **Never present a prepared campaign as a running one.** Use the declared states — *prepared*,
    *running*, *closed* — and give the observation count.
 10. **Never announce a cadence that no scheduler produces.** There is no scheduler in the
