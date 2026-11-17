@@ -39,6 +39,20 @@
 
 ---
 
+## Une promesse fondée sur une architecture que vous pouvez examiner
+
+Les capacités de Station reposent sur des composants documentés, des contrats explicites et des
+limites vérifiables. Découvrez comment fonctionne Station, ce qu'elle enregistre et ce qu'elle ne
+prétend pas démontrer — chaque capacité porte son état 🟢 🟡 🔴 et sa limite.
+
+**[Explorer l'architecture Station →](ARCHITECTURE.md)**
+
+*L'architecture propre à Station, en huit parties. Le document est rédigé en anglais. Pour la
+chaîne dans son ensemble, voir l'[architecture produit
+NeoMundi](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md).*
+
+---
+
 ## Accès et documentation Station
 
 [Station en ligne](https://station.neomundi.org) · [Commencer](START_HERE.fr.md) · [Schémas d’enregistrement](schemas/) · [Preuves et travaux](EVIDENCE.fr.md) · [Contrat d’interopérabilité](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [SDK Python sur PyPI](https://pypi.org/project/neomundi/) (`pip install neomundi`) · [sources du SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
@@ -270,7 +284,7 @@ style.
 
 ## Documentation
 
-[**Commencer →**](START_HERE.fr.md) · [Glossaire](GLOSSARY.fr.md) · [Feuille de route](ROADMAP.fr.md)
+[**Commencer →**](START_HERE.fr.md) · [Architecture](ARCHITECTURE.md) · [Glossaire](GLOSSARY.fr.md) · [Feuille de route](ROADMAP.fr.md)
 
 
 **Disponible dès maintenant — les contrats d'enregistrement.**
