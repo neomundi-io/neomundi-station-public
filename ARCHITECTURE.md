@@ -441,6 +441,7 @@ the reference file.*
 ### Fingerprints, versions and what defines a series
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 300}} }%%
 flowchart TB
   OBS["<b>Observation</b><br/>provider<br/>requested model<br/>attestation level<br/>flow type<br/>prompt version<br/>dataset + version<br/>params sent"]
 
