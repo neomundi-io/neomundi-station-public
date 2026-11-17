@@ -4,9 +4,11 @@
 
 # NeoMundi Station
 
-### Observer le comportement des IA dans leur contexte.
+### Pouvez-vous reproduire le comportement de votre IA dans des conditions d'essai maîtrisées ?
 
-Ce dépôt est l'**instrument de campagnes contrôlées** : il exécute des observations dans un contexte déclaré, les conserve avec leur provenance et exporte des dossiers auditables. Il produit des preuves ; il ne réalise aucune évaluation de conformité.
+**Le problème :** sans questions, modèles et conditions d'exécution documentés, les résultats d'évaluation sont difficiles à comparer ou à auditer.
+
+**Le bénéfice :** conduisez des campagnes d'observation contrôlées, conservez leurs conditions et leurs mesures, puis exportez des enregistrements traçables. Station ne décide pas de la conformité.
 
 [Architecture produit](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Audit des capacités](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [Tous les composants](https://github.com/neomundi-io/.github)
 
@@ -25,6 +27,18 @@ Ce dépôt est l'**instrument de campagnes contrôlées** : il exécute des obse
 
 ---
 
+## Ce que Station vous apporte
+
+- **Reproduire :** questions versionnées, contexte et conditions d'exécution déclarés.
+- **Comparer :** mesures et absences explicitement identifiées, sans confondre deux configurations.
+- **Documenter :** registre à ajout seul, provenance et exports inspectables.
+
+**Pour qui ?** Équipes d'évaluation et d'ingénierie IA, responsables qualité et programmes pilotes ayant besoin de campagnes reproductibles.
+
+**[Accéder à Station](https://station.neomundi.org)** · [Comprendre le fonctionnement](#comment-ça-fonctionne) · [Voir les schémas](schemas/) · [Parler d'un pilote](mailto:contact@neomundi.io)
+
+---
+
 ## Accès et documentation Station
 
 [Station en ligne](https://station.neomundi.org) · [Commencer](START_HERE.fr.md) · [Schémas d’enregistrement](schemas/) · [Preuves et travaux](EVIDENCE.fr.md) · [Contrat d’interopérabilité](https://github.com/neomundi-io/neomundi-measurement-interoperability) · [SDK Python sur PyPI](https://pypi.org/project/neomundi/) (`pip install neomundi`) · [sources du SDK](https://github.com/neomundi-io/neomundi-python-sdk) · [MCP](https://github.com/neomundi-io/neomundi-measurement-mcp)
@@ -33,7 +47,7 @@ Ce dépôt est l'**instrument de campagnes contrôlées** : il exécute des obse
 
 ## La chaîne de produits NeoMundi
 
-**Measurement → Station → Evidence** : trois produits complémentaires le long de ce parcours, une route cohérente pour mesurer le comportement des IA puis contrôler indépendamment pour mesurer le comportement des IA puis contrôler indépendamment les preuves techniques.
+**Measurement → Station → Evidence** : trois produits complémentaires le long de ce parcours, une route cohérente pour mesurer le comportement des IA puis contrôler indépendamment les preuves techniques.
 
 | Étape | Produit | Fonction |
 |---|---|---|
