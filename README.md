@@ -4,9 +4,11 @@
 
 # NeoMundi Station
 
-### Observe AI behaviour in context.
+### Can you reproduce how your AI behaved under controlled test conditions?
 
-This repository is the **controlled-campaign instrument**: it runs observations in a declared context, retains them with their provenance, and exports auditable records. It produces evidence; it performs no conformity assessment.
+**The problem:** when questions, models and execution conditions are not consistently recorded, AI evaluation results are hard to compare or audit.
+
+**The benefit:** run controlled AI observation campaigns, preserve their conditions and measurements, and export traceable records. Station does not decide conformity.
 
 [Product architecture](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Capability audit](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [All components](https://github.com/neomundi-io/.github)
 
@@ -22,6 +24,18 @@ This repository is the **controlled-campaign instrument**: it runs observations 
 **[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Create an account](https://controltower.neomundi.io/welcome)**
 
 </div>
+
+---
+
+## What Station gives your team
+
+- **Reproduce:** versioned questions and declared execution conditions.
+- **Compare:** measurements and unavailable states remain explicit across runs.
+- **Document:** add-only records, provenance and inspectable exports.
+
+**Who it's for:** AI evaluation and engineering teams, quality leads and pilot programmes that need reproducible campaigns.
+
+**[Open Station](https://station.neomundi.org)** · [How it works](#how-it-works) · [Record schemas](schemas/) · [Discuss a pilot](mailto:contact@neomundi.io)
 
 ---
 
