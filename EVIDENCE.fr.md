@@ -37,7 +37,7 @@ n'ont pas fait l'objet d'une reproduction indépendante.
 
 ## Pilotes
 
-[**Ouvrir l'index des pilotes →**](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md)
+[**Ouvrir l'index des pilotes →**](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG_FR.md)
 
 L'index existant reste la source détaillée des descriptions. Ses statuts
 qualifient un périmètre annoncé ; les pièces publiques examinables sont distinguées ci-dessous.
@@ -51,9 +51,9 @@ qualifient un périmètre annoncé ; les pièces publiques examinables sont dist
 | [OmarAGI / REVAS](https://github.com/effacermonexistence/omaragi-neomundi-pilot) | Documentation partenaire de cinq cas synthétiques | Pilote synthétique ; le test réel suivant est décrit comme prévu. |
 | [ManChine / RiCo](https://github.com/neomundi-io/use-case-rico-observation-to-admissibility) | Documentation d'architecture | Aucune exécution complète entre machines établie par ces pièces. Terminologie à aligner avec l'index des pilotes. |
 | [VERITAS](https://github.com/veritasfuji-japan/veritas_os/blob/main/docs/en/architecture/neomundi-rgc-v02-real-observation-poc.md) | Code et tests de l'adaptateur, procédure de réception d'une observation réelle | Une procédure et un adaptateur ne prouvent pas qu'un échange réel a été terminé. |
-| [DriftShield / HIC](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md) | Une exécution rapportée dans l'index | Dossier de preuve public détaillé non identifié dans les sources examinées. |
-| [SEILX](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md) | Évaluation décrite dans l'index | En cours ; aucun résultat final établi ici. |
-| [AI Business — assurance](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md) | Évaluation décrite ; audit contrôlé connexe disponible | En cours ; l'audit contrôlé n'établit pas de résultat de souscription. |
+| [DriftShield / HIC](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG_FR.md) | Une exécution rapportée dans l'index | Dossier de preuve public détaillé non identifié dans les sources examinées. |
+| [SEILX](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG_FR.md) | Évaluation décrite dans l'index | En cours ; aucun résultat final établi ici. |
+| [AI Business — assurance](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG_FR.md) | Évaluation décrite ; audit contrôlé connexe disponible | En cours ; l'audit contrôlé n'établit pas de résultat de souscription. |
 
 Un **pilote technique OGS** a également été signalé. L'adresse fournie renvoyait
 404 lors de cette revue ; l'accès à la source reste à vérifier et aucun résultat

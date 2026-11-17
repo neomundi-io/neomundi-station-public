@@ -325,7 +325,7 @@ work on your own material, [get in touch](https://neomundi.io).
 
 **Status:** implementation and API exchange reported by the developer; independent qualification against the current measurement API, security review and a signed pilot distribution agreement are **pending**. No installers or source code are distributed here. Ownership, maintenance and pilot support remain with the developer. This mention does not certify interoperability, security or production readiness. Partner wording and public attribution remain subject to final confirmation.
 
-See the [pilot/use-case index](https://github.com/neomundi-io/neomundi-use-cases#pilot-index).
+See the [pilot/use-case index](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG.md#pilot-index).
 
 ## Infrastructure & Program Support
 

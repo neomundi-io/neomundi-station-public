@@ -36,7 +36,7 @@ or independently reproduce partner claims.
 
 ## Pilots
 
-[**Open the pilot index →**](https://github.com/neomundi-io/neomundi-use-cases)
+[**Open the pilot index →**](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG.md)
 
 The existing index remains the detailed source for pilot descriptions. Its status labels
 describe a stated scope; the public material available to inspect is identified below.
@@ -50,9 +50,9 @@ describe a stated scope; the public material available to inspect is identified 
 | [OmarAGI / REVAS](https://github.com/effacermonexistence/omaragi-neomundi-pilot) | Partner documentation of five synthetic signal mappings | Synthetic pilot; the live follow-up is described as planned. |
 | [ManChine / RiCo](https://github.com/neomundi-io/use-case-rico-observation-to-admissibility) | Architectural documentation | No completed machine-to-machine run established by these materials. Terminology requires alignment with the pilot index. |
 | [VERITAS](https://github.com/veritasfuji-japan/veritas_os/blob/main/docs/en/architecture/neomundi-rgc-v02-real-observation-poc.md) | Adapter code/tests and real-observation intake procedure | A procedure and adapter do not establish that a real handoff was completed. |
-| [DriftShield / HIC](https://github.com/neomundi-io/neomundi-use-cases) | One execution reported in the index | Detailed public evidence package not identified in the reviewed sources. |
-| [SEILX](https://github.com/neomundi-io/neomundi-use-cases) | Evaluation described in the index | In progress; no final result established here. |
-| [AI Business — insurance](https://github.com/neomundi-io/neomundi-use-cases) | Evaluation described; related controlled audit exists | In progress; the controlled audit does not establish underwriting results. |
+| [DriftShield / HIC](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG.md) | One execution reported in the index | Detailed public evidence package not identified in the reviewed sources. |
+| [SEILX](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG.md) | Evaluation described in the index | In progress; no final result established here. |
+| [AI Business — insurance](https://github.com/neomundi-io/neomundi-use-cases/blob/main/CATALOG.md) | Evaluation described; related controlled audit exists | In progress; the controlled audit does not establish underwriting results. |
 
 A further **OGS technical pilot** has been reported. Its supplied repository URL returned
 404 during this review; it remains pending source access and is not counted as a verified result.
