@@ -123,12 +123,12 @@ flowchart LR
     S3["Campaign archive<br/>ZIP, schema /2"]
   end
 
-  IN --> RUN
+  IN --> R1
   R1 --> R2 --> R3 --> R4
+  R4 --> LED
+  LED --> READ
   R3 -.->|"generation"| X1
   R4 -.->|"qualification"| X2
-  RUN --> LED
-  LED --> READ
 
   classDef internal fill:#e6f2f0,stroke:#0f766e,stroke-width:1px,color:#0f172a
   classDef external fill:#eef3fb,stroke:#2563eb,stroke-width:1px,color:#0f172a
