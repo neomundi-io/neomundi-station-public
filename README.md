@@ -6,13 +6,15 @@
 
 ### Can you reproduce how your AI behaved under controlled test conditions?
 
+**Reproduce. Compare. Document.**
+
 **The problem:** when questions, models and execution conditions are not consistently recorded, AI evaluation results are hard to compare or audit.
 
 **The benefit:** run controlled AI observation campaigns, preserve their conditions and measurements, and export traceable records. Station does not decide conformity.
 
 [Product architecture](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Capability audit](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [All components](https://github.com/orgs/neomundi-io/repositories)
 
-**Run controlled observation campaigns, preserve their conditions and export auditable records.**
+**Turn controlled AI observations into auditable records your team can compare and inspect.**
 
 **INSTALL → TRACE → MEASURE → VERIFY → ACT**
 
