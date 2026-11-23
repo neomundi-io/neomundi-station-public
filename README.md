@@ -1,6 +1,6 @@
 <div align="center">
 
-<sub><b>English</b> · <a href="README.fr.md">Français</a></sub>
+[![English](https://img.shields.io/badge/EN-English-2563eb?style=flat-square)](README.md) · [![Français](https://img.shields.io/badge/FR-Fran%C3%A7ais-2563eb?style=flat-square)](README.fr.md)
 
 # NeoMundi Station
 
@@ -23,11 +23,29 @@
 [![Evidence](https://img.shields.io/badge/Evidence-Verify-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-gateway)
 [![Use cases](https://img.shields.io/badge/Use_cases-Explore-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases)
 
-**[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Create an account](https://controltower.neomundi.io/welcome)**
+**[Open live Station](https://station.neomundi.org/)** · **[Start here](START_HERE.md)** · **[Explore the evidence](EVIDENCE.md)**
+
+[Product architecture](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [All components](https://github.com/orgs/neomundi-io/repositories)
+
+**[neomundi.org](https://neomundi.org/)** · **[neomundi.io](https://neomundi.io/)**
 
 </div>
 
 ---
+
+## A reproducible campaign, from protocol to evidence
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neomundi-io/neomundi-station-public/main/assets/station-journey-en-dark.svg">
+    <img alt="Station observation journey: define protocol and test conditions, run a campaign, measure signals and coverage, review traceable records and exports." src="https://raw.githubusercontent.com/neomundi-io/neomundi-station-public/main/assets/station-journey-en-light.svg" width="100%">
+  </picture>
+</p>
+
+The diagram describes the campaign workflow, not a claim that every experiment has completed or every signal was available. Each published campaign retains its own protocol, results and coverage.
+
+---
+
 
 ## What Station gives your team
 
