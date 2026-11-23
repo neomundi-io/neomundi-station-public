@@ -6,13 +6,15 @@
 
 ### Pouvez-vous reproduire le comportement de votre IA dans des conditions d'essai maîtrisées ?
 
+**Reproduire. Comparer. Documenter.**
+
 **Le problème :** sans questions, modèles et conditions d'exécution documentés, les résultats d'évaluation sont difficiles à comparer ou à auditer.
 
 **Le bénéfice :** conduisez des campagnes d'observation contrôlées, conservez leurs conditions et leurs mesures, puis exportez des enregistrements traçables. Station ne décide pas de la conformité.
 
 [Architecture produit](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Audit des capacités](https://github.com/neomundi-io/.github/blob/main/docs/V2_FUNCTIONAL_AUDIT_2026-11-15.md) · [Tous les composants](https://github.com/orgs/neomundi-io/repositories)
 
-**Mener des campagnes d’observation contrôlées, documenter leurs conditions et exporter des dossiers auditables.**
+**Transformez vos observations contrôlées de l'IA en dossiers auditables, comparables et inspectables par votre équipe.**
 
 **INSTALL → TRACE → MEASURE → VERIFY → ACT**
 
