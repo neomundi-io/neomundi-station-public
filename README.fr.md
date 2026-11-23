@@ -1,6 +1,6 @@
 <div align="center">
 
-<sub><a href="README.md">English</a> · <b>Français</b></sub>
+[![Français](https://img.shields.io/badge/FR-Fran%C3%A7ais-2563eb?style=flat-square)](README.fr.md) · [![English](https://img.shields.io/badge/EN-English-2563eb?style=flat-square)](README.md)
 
 # NeoMundi Station
 
@@ -23,11 +23,29 @@
 [![Evidence](https://img.shields.io/badge/Evidence-Verifier-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-gateway/blob/main/README.fr.md)
 [![Use cases](https://img.shields.io/badge/Cas_d_usage-Explorer-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md)
 
-**[API](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/QUICKSTART.md)** · **[Créer un compte](https://controltower.neomundi.io/welcome)**
+**[Ouvrir la Station](https://station.neomundi.org/)** · **[Commencer](START_HERE.fr.md)** · **[Explorer les preuves](EVIDENCE.fr.md)**
+
+[Architecture produit](https://github.com/neomundi-io/.github/blob/main/docs/PRODUCT_ARCHITECTURE.md) · [Tous les composants](https://github.com/orgs/neomundi-io/repositories)
+
+**[neomundi.org](https://neomundi.org/)** · **[neomundi.io](https://neomundi.io/)**
 
 </div>
 
 ---
+
+## Une campagne reproductible, du protocole aux preuves
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neomundi-io/neomundi-station-public/main/assets/station-journey-fr-dark.svg">
+    <img alt="Parcours Station : définir le protocole et les conditions d'essai, exécuter une campagne, mesurer les signaux et la couverture, examiner les dossiers traçables et les exports." src="https://raw.githubusercontent.com/neomundi-io/neomundi-station-public/main/assets/station-journey-fr-light.svg" width="100%">
+  </picture>
+</p>
+
+Le schéma présente le parcours des campagnes, sans prétendre que toutes les expériences sont terminées ou que tous les signaux sont disponibles. Chaque campagne publiée conserve son protocole, ses résultats et sa couverture.
+
+---
+
 
 ## Ce que Station vous apporte
 
