@@ -8,6 +8,10 @@
 
 **Reproduce. Compare. Document.**
 
+**Monitor AI behavior over time through repeated, controlled observations of model executions.**
+
+Compare measurements across campaigns to identify behavioral changes and potential drift under documented test conditions. This complements application-level runtime measurement; it does not imply continuous interception of production traffic.
+
 **The problem:** when questions, models and execution conditions are not consistently recorded, AI evaluation results are hard to compare or audit.
 
 **The benefit:** run controlled AI observation campaigns, preserve their conditions and measurements, and export traceable records. Station does not decide conformity.
