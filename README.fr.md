@@ -8,6 +8,10 @@
 
 **Reproduire. Comparer. Documenter.**
 
+**Surveillez le comportement des IA dans la durée grâce à des observations répétées et contrôlées de leurs exécutions.**
+
+Comparez les mesures entre campagnes pour repérer les évolutions comportementales et les dérives potentielles dans des conditions d'essai documentées. Cette approche complète la mesure en exécution dans les applications, sans impliquer une interception continue du trafic de production.
+
 **Le problème :** sans questions, modèles et conditions d'exécution documentés, les résultats d'évaluation sont difficiles à comparer ou à auditer.
 
 **Le bénéfice :** conduisez des campagnes d'observation contrôlées, conservez leurs conditions et leurs mesures, puis exportez des enregistrements traçables. Station ne décide pas de la conformité.
