@@ -23,7 +23,7 @@ Compare measurements across campaigns to identify behavioral changes and potenti
 **INSTALL → TRACE → MEASURE → VERIFY → ACT**
 
 [![Measurement](https://img.shields.io/badge/Measurement-Measure-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement)
-[![Integrations](https://img.shields.io/badge/Integrations-6%20frameworks-7c3aed?style=flat-square)](https://github.com/neomundi-io/neomundi-integrations)
+[![Integrations](https://img.shields.io/badge/Integrations-7%20frameworks-7c3aed?style=flat-square)](https://github.com/neomundi-io/neomundi-integrations)
 [![Station](https://img.shields.io/badge/Station-Observe-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public)
 [![Evidence](https://img.shields.io/badge/Evidence-Verify-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-gateway)
 [![Use cases](https://img.shields.io/badge/Use_cases-Explore-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases)
@@ -39,7 +39,7 @@ Compare measurements across campaigns to identify behavioral changes and potenti
 ---
 
 
-**Already running LangChain, LiteLLM, MLflow, OpenTelemetry, Langfuse or the OpenAI Agents SDK?** The observations this page is about can be produced from the hook your framework already gives you — six published packages, each with an evidence level computed from a committed proof: **[integration library](https://github.com/neomundi-io/neomundi-integrations)**.
+**Already running LangChain, LiteLLM, MLflow, OpenTelemetry, Langfuse, the OpenAI Agents SDK or the Microsoft Agent Framework?** The observations this page is about can be produced from the hook your framework already gives you — seven published packages, each with an evidence level computed from a committed proof: **[integration library](https://github.com/neomundi-io/neomundi-integrations)**.
 ## A reproducible campaign, from protocol to evidence
 
 <p align="center">

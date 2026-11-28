@@ -23,7 +23,7 @@ Comparez les mesures entre campagnes pour repérer les évolutions comportementa
 **INSTALL → TRACE → MEASURE → VERIFY → ACT**
 
 [![Measurement](https://img.shields.io/badge/Measurement-Mesurer-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement/blob/main/README_FR.md)
-[![Intégrations](https://img.shields.io/badge/Int%C3%A9grations-6%20frameworks-7c3aed?style=flat-square)](https://github.com/neomundi-io/neomundi-integrations)
+[![Intégrations](https://img.shields.io/badge/Int%C3%A9grations-7%20frameworks-7c3aed?style=flat-square)](https://github.com/neomundi-io/neomundi-integrations)
 [![Station](https://img.shields.io/badge/Station-Observer-0f766e?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public/blob/main/README.fr.md)
 [![Evidence](https://img.shields.io/badge/Evidence-Verifier-D4A545?style=flat-square)](https://github.com/neomundi-io/neomundi-evidence-gateway/blob/main/README.fr.md)
 [![Use cases](https://img.shields.io/badge/Cas_d_usage-Explorer-64748b?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases/blob/main/README_FR.md)
@@ -39,7 +39,7 @@ Comparez les mesures entre campagnes pour repérer les évolutions comportementa
 ---
 
 
-**Vous utilisez déjà LangChain, LiteLLM, MLflow, OpenTelemetry, Langfuse ou le SDK OpenAI Agents ?** Les observations dont parle cette page peuvent être produites depuis le point d'accroche que votre framework vous donne déjà — six paquets publiés, chacun avec un niveau de preuve calculé depuis une preuve versionnée : **[bibliothèque d'intégrations](https://github.com/neomundi-io/neomundi-integrations)**.
+**Vous utilisez déjà LangChain, LiteLLM, MLflow, OpenTelemetry, Langfuse, le SDK OpenAI Agents ou le Microsoft Agent Framework ?** Les observations dont parle cette page peuvent être produites depuis le point d'accroche que votre framework vous donne déjà — sept paquets publiés, chacun avec un niveau de preuve calculé depuis une preuve versionnée : **[bibliothèque d'intégrations](https://github.com/neomundi-io/neomundi-integrations)**.
 ## Une campagne reproductible, du protocole aux preuves
 
 <p align="center">
